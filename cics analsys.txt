@@ -1,0 +1,36 @@
+===== putty details====
+usr:f76882d
+pass:asdf1234
+ip-add:160.220.192.157
+Target Environ: 11
+
+=== task details=====
+86 to 100 -> Amitabh
+36,37,38,106 -> Abhi
+
+====query execution procedure======
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'mercato_client_op.fnOr01pagSelezionAction'"
+
+SYSTEM_ID CONV_ID    PAGE_CODE               FLG_FIRST_PAGE
+--------- -------   ------------        --------------------------
+   1        156      mercato_client_op.fnOr01pagSelezionAction 1 
+   
+   1 record(s) selected.
+   
+3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 1 and CONV_ID = 156"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE  CONV_DESCRIPTION
+--------- ------- --------- ---------  ------------------
+ 1        156     FnDb       FnOr01    Kit Process Report 
+   
+   1 record(s) selected.
+   
+pgMenuConvType_en_US.properties -> CONV_TYPE -> Parent Transaction
+pgMenuConv_en_US.properties -> CONV_CODE -> Child TransactionParent Transaction: Sub-contracting
+Child Transaction: Kit Process Report
+Button Name: Save the Modification
+
+
+prim_cl
+
