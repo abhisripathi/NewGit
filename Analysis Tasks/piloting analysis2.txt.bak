@@ -1,0 +1,1352 @@
+======line:4767=======
+<tableitem name="piloting" code="CAUEFM" description="Y" />
+C + AU + EFM 
+0 matches in the workspace.
+
+====line:4769=====
+<tableitem name="piloting" code="CAUGPINQ" description="Y" />
+C+AU+GPINQ
+String anzPiloting = (String) CodeTableManager.getInstance().getDescription("piloting",System.getProperty("aftersales.sector")
+					+userPf.getPilotingCode()+"GPINQ");
+					
+===l:4817
+<tableitem name="piloting" code="CAU12COSTO00" description="Y" />
+CAU+12COSTO00
+no matches	
+	
+===l:4818
+<tableitem name="piloting" code="CAU13COSTO00" description="Y" />
+CAU+13COSTO00
+no matches
+
+===l:5105
+<tableitem name="piloting" code="CAU3881" description="Y" />
+CAU+3881
+no matches
+
+=====line:5161=====
+<tableitem name="piloting" code="CAUEUANZ" description="Y" />
+C+AU+EUANZ
+String euanzexcel = (String) CodeTableManager.getInstance().getDescription(  +4093
+					"piloting", System.getProperty("aftersales.sector")
+							+ userProfile.getPilotingCode() + "EUANZ");
+						
+
+
+====line:5162======
+<tableitem name="piloting" code="CAUCNANZ" description="Y" />
+C+AU+CNANZ		
+String euexcel = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userProfile.getPilotingCode() + "CNANZ");   +4096
+							
+
+
+
+===line:5181===
+<tableitem name="piloting" code="CAU3879" description="Y" />		
+1,270: String attivo3879=(String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"3879");   
+
+====line:5563===
+<tableitem name="piloting" code="CAUNR55" description="Y" />					
+C+AU+NR55
+zero matches in workspace
+
+====line:5583====
+<tableitem name="piloting" code="CAUCLBBK" description="Y" />
+C+AU+CLBBK
+String PilotingCLBBK = (String) CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+ userPf.getPilotingCode() + "CLBBK"); +821
+
+====line:5587=====
+<tableitem name="piloting" code="CAUdefPromo" description="Y" />
+C+AU+defPromo
+ String enableDefPromo = (String)CodeTableManager.getInstance().getDescription(
+ "piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"defPromo"); =195
+ 
+====linle:5588====
+ <tableitem name="piloting" code="CAUAGI38" description="Y" />
+ C+AU+AGI38
+ String AGI38Piloting = (String) CodeTableManager.getInstance().getDescription(
+ "piloting", System.getProperty("aftersales.sector") + userProfile.getPilotingCode() + "AGI38"); =3812
+ 
+====line:5601====
+ <tableitem name="piloting" code="CAUPParamMode" description="Y" />
+ C+AU+PParamMode
+ 125: String pilotingANZ = (String)CodeTableManager.getInstance().getDescription(
+ "piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"PParamMode");  
+ 
+ 
+ 
+=====line:5631====
+ <tableitem name="piloting" code="CAUOP201" description="Y" />
+ C+AU+OP201
+ String attivo_op2 = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userProfile.getPilotingCode() + "OP201"); =424
+							
+
+====line:5664=======
+<tableitem name="piloting" code="CAUNR15" description="Y" />
+C+AU+NR15
+23: String nr15Enable = (String) CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+ userProfile.getPilotingCode() + "NR15");   
+
+====line:5692====
+ <tableitem name="piloting" code="CAUNR54PL" description="Y" />
+ C+AU+NR54PL
+1,016: String enableNR54 = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+upbig.getPilotingCode()+"NR54PL");  
+
+
+
+===line:5714=====
+<tableitem name="piloting" code="CAUCMD05" description="Y" />
+C+AU+CMD05
+String enableCMD05 = (String) CodeTableManager.getInstance().getDescription(
+				"piloting",
+				System.getProperty("aftersales.sector")
+						+ upbig.getPilotingCode() + "CMD05");
+		
+====line:5754====
+ <tableitem name="piloting" code="CAUNR65" description="Y" />						
+ C+AU+NR65
+ 	String enableNR65 = (String) CodeTableManager.getInstance().getDescription(
+				"piloting", System.getProperty("aftersales.sector")
+						+ userProfile.getPilotingCode() + "NR65");
+ 
+
+====line:5824=====
+ <tableitem name="piloting" code="CAUNR23" description="Y" />
+ C+AU+NR23
+ zero matches 
+ 
+====line:5861====
+ <tableitem name="piloting" code="CAUNR63" description="Y" />
+ C+AU+NR63
+ 4,205: String nr63enable =(String) CodeTableManager.getInstance().getDescription(
+ "piloting",System.getProperty("aftersales.sector")+upf.getPilotingCode()+"NR63");  
+ 
+ 516: String nr63enable =(String) CodeTableManager.getInstance().getDescription(
+ "piloting",System.getProperty("aftersales.sector") + pilotingCode + "NR63"); 
+ 
+778: String nr63enable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector") + pilotingCode + "NR63");   
+
+943: String nr63enable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector") + pilotingCode + "NR63");   
+
+====line:5886
+<tableitem name="piloting" code="CAUNR50" description="Y" />
+C+AU+NR50
+String attivonR50 =(String) CodeTableManager.getInstance().getDescription("piloting",System.getProperty("aftersales.sector")
+										+userPf.getPilotingCode()+"NR50");
+===line:5924
+<tableitem name="piloting" code="CAUOP509" description="Y" />										
+C+AU+
+170: String attivoop509 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPdCode()+"OP509");  
+
+===line:5941
+<tableitem name="piloting" code="CAUNR121" description="Y" />
+C+AU+NR121
+534: String attivo_nr121 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR121");  
+
+====line:5958
+<tableitem name="piloting" code="CAUNR27" description="Y" />
+C+AU+NR27
+String attivo27 = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userProfile.getPilotingCode() + "NR27");
+							
+====line:5974
+<tableitem name="piloting" code="CAUNR84" description="Y" />							
+C+AU+NR84
+String attivo84 = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userPf.getPilotingCode() + "NR84");
+							
+====line:5991
+<tableitem name="piloting" code="CAUOPNORD" description="Y" />							
+C+AU+OPNORD
+	String attivo = (String) CodeTableManager.getInstance().getDescription("piloting",
+				System.getProperty("aftersales.sector") + "OPNORD");
+				
+===line:6028
+<tableitem name="piloting" code="CAUNR104" description="Y" />				
+C+AU+NR104
+137: String nr104enable =(String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR104");  
+
+====l:6051
+ <tableitem name="piloting" code="CAUPD35" description="Y" />
+ C+AU+PD35
+ String pd35enable = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userProfile.getPilotingCode() + "PD35");
+							
+===l:6097
+ <tableitem name="piloting" code="CAUOP213" description="Y" />							
+ C+AU+OP213
+ 	String enableOP213 = (String) CodeTableManager.getInstance().getDescription(
+				"piloting", System.getProperty("aftersales.sector")
+						+ userProfile.getPilotingCode() + "OP213");
+						
+====l:6132
+ <tableitem name="piloting" code="CAUNR138" description="Y" />						
+ C+AU+NR138
+ 489: String enableNR_138 = (String)CodeTableManager.getInstance().getDescription(
+ "piloting", System.getProperty("aftersales.sector")+poilt+"NR138");  
+ 
+ 
+===l:6150
+ <tableitem name="piloting" code="CAUNR103" description="Y" />
+ C+AU+NR103
+ no  matches
+ 
+====l:6217
+ <tableitem name="piloting" code="CAUNR52" description="Y" />
+ C+AU+NR52
+ 580: // String attivo =(String) CodeTableManager.getDescription(
+ "piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR52");  this is in comments
+ 
+===l:6236
+ <tableitem name="piloting" code="CAUNR52ShipTo" description="Y" />
+ C+AU+NR52ShipTo
+ 81: String attivoShipTo =(String) CodeTableManager.getInstance().getDescription(
+ "piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR52ShipTo");
+ 
+===l:6267
+<tableitem name="piloting" code="CAUNR67NR105" description="Y" /> 
+C+AU+NR67NR105
+231: CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR67NR105"); 
+
+====l:6287
+<tableitem name="piloting" code="CAUOP103" description="Y" /> 
+C+AU+OP103
+String op1_03enable = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userProfile.getPilotingCode() + "OP103");
+							
+===l:6337
+ <tableitem name="piloting" code="CAU182" description="Y" />
+look into it
+
+====l:6388
+<tableitem name="piloting" code="CAUNR30" description="Y" /> 
+C+AU+NR30
+129: String enableNR30 = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR30");  
+
+
+===l:6407
+<tableitem name="piloting" code="CAUNR24" description="Y" />
+C+AU+NR24
+	String attivoNR24 = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ datiInput.getPilotingCode() + "NR24");\
+							
+							
+===l:6443
+<tableitem name="piloting" code="CAUOP4_24" description="Y" />							
+C+AU+OP4_24
+6,215: String enable = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"OP4_24"); 
+
+==l:6493
+<tableitem name="piloting" code="CAUOP128" description="Y" /> 
+C+AU+OP128
+34: String enableOP1_28 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+ upf.getPilotingCode()+"OP128"); 
+
+
+===l:6526
+<tableitem name="piloting" code="CAU4395" description="Y" />
+C+AU+4395
+ String pdbt4395Enable = (String) CodeTableManager.getInstance()
+						.getDescription("piloting",
+								System.getProperty("aftersales.sector")
+										+ userProfile.getPilotingCode()
+										+ "4395");
+										
+===l:6613
+<tableitem name="piloting" code="CAUNR49" description="Y" />										
+C+AU+NR49
+181: String enableNR49 = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR49"); 
+
+ 
+====l:6631
+<tableitem name="piloting" code="CAUNR_66" description="Y" />
+C+AU+NR_66
+	String nr66Enable = (String) CodeTableManager.getInstance().getDescription(
+				"piloting", System.getProperty("aftersales.sector")
+				+ userProfile.getPilotingCode() + "NR_66");
+				
+				
+===l:6694
+<tableitem name="piloting" code="CAUOP4_29" description="Y" />				
+C+AU+OP4_29
+	String attivoOp4_29 = (String) CodeTableManager.getInstance().getDescription(
+		"piloting", System.getProperty("aftersales.sector")
+			+ pilotingCode + "OP4_29");
+								
+								
+===l:6742
+<tableitem name="piloting" code="CAUNR151" description="Y" />								
+C+AU+NR151
+
+String nr151Enable = (String) CodeTableManager.getInstance().getDescription(
+	"piloting", System.getProperty("aftersales.sector")
+		+ userPf.getPilotingCode() + "NR151");
+							
+====l:6763
+<tableitem name="piloting" code="CAUNR153" description="Y" />							
+C+AU+NR153
+	/*String nr153Enable = (String) CodeTableManager.getInstance().getDescription(
+		"piloting", System.getProperty("aftersales.sector")
+			+ userPf.getPilotingCode() + "NR153");*/
+its i the comments -> look into it.
+
+
+====l:6784
+<tableitem name="piloting" code="CAUOP4_04" description="Y" />							
+C+AU+OP4_04
+4,409: attivo =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+varUP.getPilotingCode()+"OP4_04");
+
+
+====l:6827
+<tableitem name="piloting" code="CAUNR83" description="Y" />  
+C+AU+NR83
+no matches
+
+
+====l:6846
+<tableitem name="piloting" code="CAUNR18" description="Y" />
+C+AU+NR18
+2,479: String enableNR18 = (String)CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+userPS.getPilotingCode()+"NR18");  
+
+
+====l:6871
+<tableitem name="piloting" code="CAUNR_140" description="Y" />
+C+AU+NR_140
+	String nr140Enable = (String) CodeTableManager.getInstance().getDescription(
+ 			"piloting", System.getProperty("aftersales.sector")
+ 			+ userProfile.getPilotingCode() + "NR_140"); %>
+			
+			
+===l:6893
+<tableitem name="piloting" code="CAU4587" description="Y" />			
+C+AU+4587
+13: String  enableNR138c=(String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPfNR138.getPilotingCode()+"4587"); 
+
+
+===l:6927
+<tableitem name="piloting" code="CAUBR97" description="Y" /> 
+C+AU+BR97
+3,415: String performBR97 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"BR97");  
+
+
+====l:6958
+<tableitem name="piloting" code="CAUPSE1127" description="Y" />
+C+AU+PSE1127
+309: String enablePSE1127 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"PSE1127"); 
+
+ 
+=====l:6984
+<tableitem name="piloting" code="CAUOP215S3" description="Y" />
+C+AU+OP215S3
+4,769: String attivoOP215S3 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"OP215S3");  
+
+===l:7022
+<tableitem name="piloting" code="CAUNR128" description="Y" />
+C+AU+NR128
+326: String enableNR128 = CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR128"); 
+
+======l:7047
+<tableitem name="piloting" code="CAUEXT17142" description="Y" />
+C+AU+EXT17142
+no matches
+
+
+====l:7065
+<tableitem name="piloting" code="CAUNR38" description="Y" />
+C+AU+NR38
+52: String enableNR38 = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR38");  
+
+=====l:7086
+<tableitem name="piloting" code="CAUOP4_30" description="N" />
+C+AU+OP4_30
+100: String enable = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"OP4_30");
+
+  
+=====l:7104
+<tableitem name="piloting" code="CAUOP4_24AN" description="Y" />
+C+AU+OP4_24AN
+175: String attivoChangeStato = (String) CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+ userPf.getPilotingCode() + "OP4_24AN"); 
+
+ 
+====l:7120
+<tableitem name="piloting" code="CAUNR148" description="Y" />
+C+AU+NR148
+not matches
+
+
+====l:7140
+<tableitem name="piloting" code="CAUNR162" description="Y" />
+C+AU+NR162
+205: String attivoNR162 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR162");   
+ 
+======l:7196
+<tableitem name="piloting" code="CAUNR163" description="Y" />
+C+AU+NR163
+String op404enable =(String) CodeTableManager.getInstance().getDescription("piloting",
+	System.getProperty("aftersales.sector")+(userProfile.getPilotingCode())+"NR163");
+	
+	
+====l:7236
+<tableitem name="piloting" code="CAUCKISPE" description="Y" />	
+C+AU+CKISPE
+String attivoCkIspe = (String) CodeTableManager.getInstance().getDescription(
+						"piloting", System.getProperty("aftersales.sector")
+								+ userProfile.getPilotingCode() + "CKISPE");
+								
+								
+===l:7254
+<tableitem name="piloting" code="CAU5769" description="Y" />								
+C+AU+5769
+String attivo5769 = (String) CodeTableManager.getInstance().getDescription(
+					"piloting",
+					System.getProperty("aftersales.sector")
+							+ upbig.getPilotingCode() + "5769");
+							
+							
+===l:7273
+<tableitem name="piloting" code="CAUBR159" description="Y" />							
+C+AU+BR159
+5,918: String enable159 = (String)CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"BR159");  
+
+
+====l:7290
+<tableitem name="piloting" code="CAUNR70" description="Y" />
+C+AU+NR70
+527: String attivoNR70 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+(userPf.getPilotingCode())+"NR70");  
+
+====l:7308
+<tableitem name="piloting" code="CAUNR167" description="Y" />
+C+AU+NR167
+no matches
+
+
+=====l:7324
+<tableitem name="piloting" code="CAUNR167C" description="Y" />
+C+AU+NR167C
+186: String Nr167Piloting = (String)CodeTableManage
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR167C"); 
+
+
+===l:7341
+<tableitem name="piloting" code="CAUORDINVOICE" description="Y" /> 
+C+AU+ORDINVOICE
+2,524: String invoiceEnable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfileSmall.getPilotingCode()+"ORDINVOICE");  
+
+
+=====l:7358
+<tableitem name="piloting" code="CAUNR155" description="Y" />
+C+AU+
+175: String attivoNR155 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR155");  
+
+
+=====l:7378
+<tableitem name="piloting" code="CAUPROFORMA" description="Y" />
+C+AU+PROFORMA
+1,448: //enableProformaForEu = (String) CodeTableManager.getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"PROFORMA"); 
+in comments look into it
+
+
+===l:7397
+<tableitem name="piloting" code="CAUD2DENABLE" description="Y" /> 
+C+AU+D2DENABLE
+8,512: enableProformaForEu = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+pilotingCode+"D2DENABLE");  
+
+
+====l:7438
+<tableitem name="piloting" code="CAUINVDET" description="Y" />
+C+AU+INVDET
+92: String enable = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"INVDET");
+
+  
+====l:7458
+<tableitem name="piloting" code="CAUDOWNLIMIT" description="Y" />
+C+AU+DOWNLIMIT
+no matches
+
+
+====l:7474
+<tableitem name="piloting" code="CAUPRICEDATE" description="Y" />
+C+AU+PRICEDATE
+no matches
+
+
+=====l:7491
+<tableitem name="piloting" code="CAUNR210" description="Y" />
+C+AU+NR210
+53: String enableNr210 = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR210"); 
+
+ 
+===l:7509
+<tableitem name="piloting" code="CAUMAN_INV" description="Y" />
+C+AU+MAN_INV
+enableCopy = (String) CodeTableManager.getInstance().getDescription("piloting",
+					System.getProperty("aftersales.sector") + pilotingCode
+							+ "MAN_INV");
+							
+							
+===l:7533
+<tableitem name="piloting" code="CAUBBEU" description="Y" />
+C+AU+BBEU
+String attivoBBEu = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ pilotingCode + "BBEU");
+							
+							
+====l:7574
+<tableitem name="piloting" code="CAUSUBDEALRESTR" description="Y" />							
+C+AU+SUBDEALRESTR
+476: String attivoSubDealRestrict=(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"SUBDEALRESTR");  
+
+
+===l:7605
+<tableitem name="piloting" code="CAUINVFORMAT" description="Y" />
+C+AU+INVFORMAT
+719: String attivoCNHEU =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"INVFORMAT");  
+
+
+=====l:7611
+<tableitem name="piloting" code="CAUANZ_16" description="Y" />
+C+AU+ANZ_16
+1,303: final String enableANZ16 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"ANZ_16"); 
+
+
+====l:7628
+<tableitem name="piloting" code="CAUANZ12" description="Y" />
+C+AU+ANZ12
+175: final String anz12enable =(String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"ANZ12");  
+				
+				
+====l:7629
+<tableitem name="piloting" code="CAUANZ18" description="Y" />
+C+AU+ANZ18
+no matches
+
+
+====l:7633
+<tableitem name="piloting" code="CAUANZ_53" description="Y" />
+C+AU+ANZ_53
+1,084: final String enableANZ53 =(String) CodeTableManager.getInstance().getDescription(
+PILOTING ,System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"ANZ_53");  
+check once 
+
+
+=====l:7649
+<tableitem name="piloting" code="CAUANZ_50" description="Y" />
+C+AU+ANZ_50
+final String enableANZ50 = (String) CodeTableManager.getInstance()
+	.getDescription("piloting",
+		System.getProperty("aftersales.sector")
+			+ pilotingCode + "ANZ_50");
+										
+										
+====l:7653
+<tableitem name="piloting" code="CAUANZ_PRIM" description="Y" />										
+C+AU+ANZ_PRIM
+String enableANZ50 = (String) CodeTableManager
+							.getInstance()
+							.getDescription(
+									"piloting",
+									System.getProperty("aftersales.sector")
+											+ userPf.getPilotingCode()
+											+ "ANZ_PRIM");
+											
+											
+====l:7669
+<tableitem name="piloting" code="CAUANZFIN" description="N" />											
+C+AU+ANZFIN
+1,104: String attivoANZFIN =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"ANZFIN");  
+
+
+====l:7676
+<tableitem name="piloting" code="CAUANZ21" description="Y" />
+C+AU+ANZ21
+1,989: String attivoANZ21 = (String) CodeTableManager.getInstance().getDescription(
+OpConstants.PILOTING,System.getProperty(OpConstants.AFTER_SECTOR)+userPf.getPilotingCode() + "ANZ21");
+
+  
+====l:7696
+<tableitem name="piloting" code="CAUANZ_51" description="Y" />
+C+AU+ANZ_51
+1,160: final String enableANZ51 =(String) CodeTableManager.getInstance().getDescription(
+PILOTING ,System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"ANZ_51");  
+check once
+
+
+=====l:7702
+<tableitem name="piloting" code="CAUCR_449" description="Y" />
+C+AU+CR_449
+18: String enableCR449 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfileANZ16.getPilotingCode()+"CR_449"); 
+
+ 
+======l:7742
+<tableitem name="piloting" code="CAUTT1_07" description="Y" />
+C+AU+TT1_07
+String comtmntProgrmEnable = (String) CodeTableManager.getInstance().getDescription(
+				"piloting", System.getProperty("aftersales.sector")
+				+ userPf.getPilotingCode() + "TT1_07");
+				
+				
+====l:7758
+<tableitem name="piloting" code="CAUTT1_11" description="Y" />				
+C+AU+TT1_11
+725: final String enabTT1_11=(String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"TT1_11"); 
+
+ 
+====l:7768
+<tableitem name="piloting" code="CAUANZ_33" description="Y" />
+C+AU+ANZ_33
+final String enableANZ33 = (String) CodeTableManager.getInstance()
+	.getDescription("piloting",
+		System.getProperty("aftersales.sector")
+			+ userProfile.getPilotingCode() + "ANZ_33");
+									
+									
+===l:7774
+<tableitem name="piloting" code="CAUINTANZ14" description="Y" />									
+C+AU+INTANZ14
+no matches
+
+
+====l:7778
+<tableitem name="piloting" code="CAUANZ_24" description="Y" />
+C+AU+ANZ_24
+37: String enableANZ24 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"ANZ_24"); 
+
+ 
+====l:7781
+<tableitem name="piloting" code="CAUANZ_03" description="Y" />
+C+AU+ANZ_03
+895: final String anz03Enable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"ANZ_03"); 
+
+ 
+======l:7784
+<tableitem name="piloting" code="CAUANZ_61" description="Y" />
+C+AU+ANZ_61
+2,719: final String enableANZ61 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+this.userProfile.getPilotingCode()+"ANZ_61");  
+
+
+====l:7788
+<tableitem name="piloting" code="CAUANZOP1_03" description="N" />
+C+AU+ANZOP1_03
+final String enableANZ7237 = (String) CodeTableManager.getInstance()
+	.getDescription(OpConstants.PILOTING,
+			System.getProperty(OpConstants.AFTER_SECTOR)
+				+ userProfile.getPilotingCode()
+					+ "ANZOP1_03");
+										
+====l:7829
+<tableitem name="piloting" code="CAUPRMINT9" description="Y" />										
+C+AU+PRMINT9
+172: final String enablePRMINT9= (String)com.gv.it.framework.CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+ ((UserProfile)session.getAttribute("UserProfile")).getPilotingCode() + "PRMINT9");  
+
+
+====l:7849
+<tableitem name="piloting" code="CAUPRMINT3" description="Y" />
+C+AU+PRMINT3
+391: String enablePrim34=(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+ userProfile.getPilotingCode() + "PRMINT3");  
+
+
+====l:7857
+<tableitem name="piloting" code="CAUANZCR_611" description="Y" />
+C+AU+ANZCR_611
+99: final String enableANZ611 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userprofileSm.getPilotingCode()+"ANZCR_611");  
+
+
+====l:7926
+<tableitem name="piloting" code="CAUNR_234" description="Y" />
+C+AU+NR_234
+no matches
+
+
+====l:7961
+<tableitem name="piloting" code="CAUNR_206" description="Y" />
+C+AU+NR_206
+1,027: String attivonr206 = (String) CodeTableManager.getInstance().getDescription("
+piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR_206");  
+
+
+========l:8025
+<tableitem name="piloting" code="CAUNR_440" description="Y" />
+C+AU+NR_440
+String enableNr440 = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userProfile.getPilotingCode() + "NR_440");
+							
+							
+=====l:8044
+<tableitem name="piloting" code="CAUNR338" description="Y" />							
+20: String enableTotalVolume = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR338"); 
+
+
+===l:8103
+<tableitem name="piloting" code="CAUNR_316" description="Y" /> 
+C+AU+NR_316
+360: String attivoNR316 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+upf.getPilotingCode()+"NR_316"); 
+
+ 
+======l:8108
+<tableitem name="piloting" code="CAUANZ27" description="Y" />
+CAU+ANZ27
+178: String anz27Pilot =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"ANZ27");  
+
+
+=====l:8110
+<tableitem name="piloting" code="CAUANZ27WMARK" description="Y" />
+C+AU+ANZ27WMARK
+556: String watermarkPilot =(String) CodeTableManager.getInstance().getDescription(
+PILOTING,System.getProperty(SECTOR)+userPf.getPilotingCode()+"ANZ27WMARK");  
+
+
+==========l:8113
+<tableitem name="piloting" code="CAU7425" description="Y" />
+C+AU+7425
+642: String anzPiloting = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"7425");  
+
+
+========l:8124
+<tableitem name="piloting" code="CAUANZ32" description="Y" />
+C+AU+ANZ32
+5,419: final String enabANZ32 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"ANZ32");  
+
+
+====l:8130
+<tableitem name="piloting" code="CAUANZ59" description="Y" />
+no matches
+
+
+===========================Chek some codes in btween here 8124 - 8202==========
+
+=====l:8202
+<tableitem name="piloting" code="CAU6804" description="Y"/>
+C+AU+6804
+no matches
+
+
+=====l:8220
+<tableitem name="piloting" code="CAU7540" description="Y"/>
+C+AU+7540
+no matches
+
+
+=======l:8223
+<tableitem name="piloting" code="CAU7538" description="Y"/>
+C+AU+7538
+2,161: String piloting = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"7538"); 
+
+
+====l:8229
+<tableitem name="piloting" code="CAU7552" description="Y"/>
+C+AU+7552
+44: String enable7552 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+upBig.getPilotingCode()+"7552"); 
+ 
+=====l:
+<tableitem name="piloting" code="CAU7559" description="Y"/>
+C+AU+7559
+String attivo7559 = (String) CodeTableManager.getInstance().getDescription(
+	"piloting", System.getProperty("aftersales.sector")
+		+ userProfile.getPilotingCode() + "7559");
+								
+								
+====l:8269
+<tableitem name="piloting" code="CAU7566" description="Y"/>								
+C+AU+7566
+596: String attivo =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+up.getPilotingCode()+"7566");
+
+
+=====l:8285
+<tableitem name="piloting" code="CAU7567" description="Y"/>  
+C+AU+7567
+no matches
+
+
+====l:8292
+<tableitem name="piloting" code="CAU7226" description="Y"/>
+C+AU+7226
+	String enableBrandCheck = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userPf.getPilotingCode() + "7226");	
+
+							
+====l:8322
+<tableitem name="piloting" code="CAUUSA117118CNH" description="Y" />
+C+AU+USA117118CNH
+
+1,628: String enableUSA117118Check = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"USA117118CNH");
+
+  
+========l:8392
+<tableitem name="piloting" code="CAUUSA55132" description="Y"/>
+C+AU+USA55132
+1,403: String enableANZ55 = (String)CodeTableManager.getInstance().getDescription("piloting", System.getProperty(
+"aftersales.sector") + userProfile.getPilotingCode() + "USA55132");  
+
+
+========l:8446
+<tableitem name="piloting" code="CAUPACUSA84" description="Y"/>
+C+AU+PACUSA84
+1,365: final String enablePacUSA84 = (String)CodeTableManager.getInstance().getDescription("piloting", System.getProperty(
+"aftersales.sector") + userProfile.getPilotingCode() + "PACUSA84");  
+
+
+=======l:8469
+ <tableitem name="piloting" code="CAUUSA_101" description="Y"/>
+ C+AU+USA_101
+ 308: String usa_101_enable = (String)CodeTableManager.getInstance().getDescription(
+ "piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"USA_101");  
+ 
+ 
+====l:8522
+ <tableitem name="piloting" code="CAU6368428" description="Y" />
+ C+AU+6368428
+ String enabled_6368428 = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userProfile.getPilotingCode() + "6368428");
+							
+							
+====l:8547
+<tableitem name="piloting" code="CAU7573" description="Y"/>						
+C+AU+7573
+no matches
+
+====l:8552
+<tableitem name="piloting" code="CAU7584" description="Y"/>
+CAU+7584
+String piloting = (String) CodeTableManager.getInstance().getDescription(
+							"piloting", System.getProperty("aftersales.sector")
+							+ userPf.getPilotingCode() + "7584");
+							
+====l:8556
+<tableitem name="piloting" code="CAU7576" description="Y"/>							
+C+AU+7576
+final String enableAUPriceList = (String) CodeTableManager.getInstance()
+	.getDescription("piloting",System.getProperty("aftersales.sector")
+			+ userPf.getPilotingCode() + "7576");
+			
+			
+====l:8567
+<tableitem name="piloting" code="CAU7610" description="Y"/>									
+CAU+7610
+90: String attivon7610 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"7610");  
+
+
+=== remaining 67
+do on monday
+
+====l:8571
+<tableitem name="piloting" code="CAU7612" description="Y"/>
+C+AU+7612
+1,277: String enable7612 = (String) CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+ userProfile.getPilotingCode() + "7612");  
+
+
+=====l:8589
+<tableitem name="piloting" code="CAU7608" description="Y"/>
+C+AU+7608
+22: String attivo7608 = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"7608");  
+
+
+====l:8592
+<tableitem name="piloting" code="CAU7598" description="Y"/>
+C+AU+7598
+2,867: String enable7598 =(String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"7598"); 
+
+===l:8664
+<tableitem name="piloting" code="CAU7686" description="Y"/> 
+C+AU+7686
+no matches
+
+
+==l:8709
+<tableitem name="piloting" code="CAUGENPINQORD" description="Y"/>
+C+AU+GENPINQORD
+1,048: String attivoANZ = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userprofile.getPilotingCode()+"GENPINQORD");  
+
+
+===l:8712
+<tableitem name="piloting" code="CAUMASSUPORD" description="Y" />
+C+AU+MASSUPORD
+3,962: // CodeTableManager.getInstance().getDescription("piloting",System.getProperty(
+"aftersales.sector")+userProfile.getPilotingCode()+"MASSUPORD");  in comments
+
+
+====l:8714
+<tableitem name="piloting" code="CAU7677" description="Y"/>
+C+AU+7677final String checkLines = (String) CodeTableManager.getInstance()
+	.getDescription("piloting",System.getProperty("aftersales.sector")
+		+ userProfile.getPilotingCode()3+ "7677");
+		
+		
+===l:8721
+<tableitem name="piloting" code="CAU7709" description="Y"/>
+C+AU+7709
+384: final String enable7709 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+upBig.getPilotingCode()+"7709"); 
+
+ 
+===l:8772
+<tableitem name="piloting" code="CAUNR285" description="Y" />
+C+AU+NR285
+	String attivoNR_285 = (String) CodeTableManager.getInstance().getDescription(
+				"piloting", System.getProperty("aftersales.sector")
+						+ userProfile.getPilotingCode() + "NR285");
+						
+						
+===l:8781
+<tableitem name="piloting" code="CAU7728" description="Y"/>						
+C+AU+7728
+2,892: final String enableCAU7728 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"7728"); 
+
+ 
+===l:8802
+<tableitem name="piloting" code="CAUCR345" description="Y" />
+C+AU+CR345
+4,174: final String enableCR345 =(String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+usf.getPilotingCode()+"CR345"); 
+
+
+===l:8811
+<tableitem name="piloting" code="CAU7707" description="Y"/> 
+C+AU+7707
+1,752: final String enable7707ANZ =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"7707");  
+
+
+===l:8825
+<tableitem name="piloting" code="CAUNR152" description="Y" />
+C+AU+NR152
+2,138: final String nr152enable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR152"); 
+
+
+====l:8843
+<tableitem name="piloting" code="CAUINTNR243" description="Y" /> 
+C+AU+INTNR243
+54: final String enableRfc = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"INTNR243");  
+
+
+====l:8857
+<tableitem name="piloting" code="CAU7729" description="Y"/>
+C+AU+7729
+1,459: final String enableCAU7729 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+up.getPilotingCode()+"7729");  
+
+
+===l:8860
+<tableitem name="piloting" code="CAU7753" description="Y"/>
+C+AU+7753
+1,855: final String enableCAU7753 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+usps.getPilotingCode()+"7753");  
+
+
+
+==l:8878
+<tableitem name="piloting" code="CAU7758" description="Y"/>
+C+AU+7758
+no matches
+
+
+===l:8883
+<tableitem name="piloting" code="CAU7759" description="Y"/>
+CAU7759
+no matches
+
+
+===l:8899
+<tableitem name="piloting" code="CAUNR208" description="Y" />
+CAUNR208
+String enbNR208 = (String) CodeTableManager.getInstance().getDescription(
+						"piloting", System.getProperty("aftersales.sector")
+								+ userProfile.getPilotingCode() + "NR208");
+								
+								
+===l:8921
+<tableitem name="piloting" code="CAUCMBINT" description="Y" />								
+CAU+CMBINT
+93: final String enableCMBINT =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"CMBINT");  
+
+
+===l:8922
+<tableitem name="piloting" code="CAU7763" description="Y"/>
+CAU+7763
+158: String enablePriceB4Promo = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"7763");  
+
+
+===l:8936
+<tableitem name="piloting" code="CAUNR190" description="Y" />
+CAU+NR190
+576: String enableNR190 = (String) CodeTableManager.getInstance().getDescription(
+PILOTING, System.getProperty(SECTOR) + userPf.getPilotingCode() + "NR190"); 
+
+ 
+===l:8954
+<tableitem name="piloting" code="CAUNR282" description="Y" />
+CAU+NR282
+503: String nr282enable = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+upf.getPilotingCode()+"NR282");  
+
+
+===l:8974
+<tableitem name="piloting" code="CAUUSA16" description="Y" />
+CAU+USA16
+no matches
+
+
+===l:9062
+<tableitem name="piloting" code="CAUNR289" description="Y" />
+CAU+NR289
+27: final String nr289enable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+upf.getPilotingCode()+"NR289");  
+
+
+===l:9083
+<tableitem name="piloting" code="CAUNR463" description="Y" />
+CAU+NR463
+no matches
+
+
+===l:9186
+<tableitem name="piloting" code="CAUNR441" description="Y" />
+CAU+NR441
+963: String nr441Enable = (String) CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+ userProfile.getPilotingCode() + "NR441");  
+
+
+===l:9221
+<tableitem name="piloting" code="CAUNR266B" description="Y" />
+CAU+NR266B
+1,497: final String nr266bEnable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR266B");  
+
+
+===l:9240
+<tableitem name="piloting" code="CAUNR266B" description="Y" />
+same as above
+
+
+==l:9250
+<tableitem name="piloting" code="CAUNR465" description="Y"/>
+CAU+NR465
+no matches
+
+
+==l:9270
+<tableitem name="piloting" code="CAUNR478" description="Y" />
+CAU+NR478
+103: final String enableNR478 = (String)CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR478");
+
+  
+==l:9289
+<tableitem name="piloting" code="CAUNR478BARCODE" description="Y" />
+CAU+NR478BARCODE
+String attivoBarcode = (String) CodeTableManager.getInstance().getDescription("piloting",System.getProperty("aftersales.sector")
+					+userProfile.getPilotingCode()+"NR478BARCODE");
+					
+					
+===l:9322
+<tableitem name="piloting" code="CAUCR693" description="Y" />					
+CAU+CR693
+452: String enablePrimCR693=(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+ userPf.getPilotingCode() + "CR693");
+
+     
+===l:9346
+<tableitem name="piloting" code="CAUCR759W" description="N" />
+CAU+CR759W
+no matches
+
+===l:9368
+<tableitem name="piloting" code="CAUCR759P" description="N" />
+CAU+CR759P
+no matches
+
+
+===l:9449
+<tableitem name="piloting" code="CAUNR279_12" description="Y" />
+CAU+NR279_12
+541: final String nr2791enable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector") + pilotingCode + "NR279_12");   
+
+
+===l:9467
+<tableitem name="piloting" code="CAUNR231" description="Y" />
+CAU+NR231
+100: String enable231 = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR231");  
+
+
+===l:9487
+<tableitem name="piloting" code="CAUNR428" description="Y" />
+CAU+NR428
+111: final String nr428Enable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"NR428");  
+
+ 
+==l:9506
+<tableitem name="piloting" code="CAUNR398" description="Y" />
+CAU+NR398
+129: String enableNR398 = (String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"NR398");  
+
+
+===l:9587
+<tableitem name="piloting" code="CAUDTDB043" description="Y" />
+CAU+DTDB043
+final String euanzUsers = (String) CodeTableManager.getInstance().getDescription("piloting",
+						   System.getProperty("aftersales.sector")+(userPf.getPilotingCode())+"DTDB043");
+						   
+						   
+===l:9605
+<tableitem name="piloting" code="CAUNR475" description="Y" />
+CAU+NR475
+	String enableNR475 = (String) CodeTableManager.getInstance().getDescription(
+					PILOTING,
+					System.getProperty(SECTOR) + userProfile.getPilotingCode()
+							+ "NR475");
+							
+							
+==l:9683
+<tableitem name="piloting" code="CAUNR279_12" description="Y" />
+CAU+NR279_12
+541: final String nr2791enable =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector") + pilotingCode + "NR279_12");   
+
+
+===l:9831
+<tableitem name="piloting" code="CAUPRMID21" description="Y" />
+CAU+PRMID21
+451: String enablePrimId21=(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+ userPf.getPilotingCode() + "PRMID21"); 
+
+ 
+===l:9881
+<tableitem name="piloting" code="CAUNR398a2" description="Y" />
+CAU+NR398a2
+589: String enableNR398a2 = (String) CodeTableManager.getInstance().getDescription(
+PILOTING, System.getProperty(SECTOR) + userPf.getPilotingCode() + "NR398a2");  
+
+
+===l:9900
+<tableitem name="piloting" code="CAUCR426b" description="Y" />
+CAU+CR426b
+618: String enableNR426 = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPdCode()+"CR426b"); 
+
+ 
+===l:9924
+<tableitem name="piloting" code="CAUNR446" description="Y" />
+CAU+NR446
+String attivo = (String) CodeTableManager.getInstance().getDescription(
+					"piloting", System.getProperty("aftersales.sector")
+							+ userPf.getPilotingCode() + "NR446");
+							
+							
+===l:9932
+<tableitem name="piloting" code="CAUPAMBLOCK" description="Y" />							
+CAU+PAMBLOCK
+String blockPamModifyMode = (String) CodeTableManager.getInstance().getDescription("piloting",
+	System.getProperty("aftersales.sector")+ userPf_PAM.getPilotingCode()+ "PAMBLOCK");
+	
+	
+===l:9967
+<tableitem name="piloting" code="CAUCR429" description="Y" />	
+CAU+CR429
+150: String enableCR429 = (String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"CR429");
+
+  
+===l:10050
+<tableitem name="piloting" code="CAUCR610" description="Y" />
+CAU+CR610
+1,969: String attivoCR_610 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",(System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"CR610"));  
+
+===l:10074
+<tableitem name="piloting" code="CAUD2DVIS" description="Y" />
+CAU+D2DVIS
+177: final String enableD2DVisualization = (String) CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+upf.getPilotingCode()+"D2DVIS");  
+
+
+===l:10075
+<tableitem name="piloting" code="CAUD2DOWS" description="Y" />
+CAU+D2DOWS
+2,223: String d2dAttivo=(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"D2DOWS"); 
+
+ 
+===l:10092
+<tableitem name="piloting" code="CAUD2DVIS" description="Y" />
+CAU+D2DVIS
+177: final String enableD2DVisualization = (String) CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+upf.getPilotingCode()+"D2DVIS"); 
+
+
+===l:10094
+<tableitem name="piloting" code="CAUTT110" description="Y"/> 
+CAU+TT110
+290: String attivoTT1_10 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",(System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"TT110"));  
+
+
+===l:10130
+<tableitem name="piloting" code="CAUHUB0" description="1" />
+CAU+HUB0
+4,211: String hub0 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"HUB0");  
+
+
+===l:10154
+<tableitem name="piloting" code="CAUANZPLT" description="Y" />
+CAU+ANZPLT
+final String enableVendorANZ=(String)CodeTableManager.getInstance().getDescription(
+ 			"piloting", System.getProperty("aftersales.sector")
+ 			+ userProfile.getPilotingCode() + "ANZPLT");
+			
+			
+===l:10184
+<tableitem name="piloting" code="CAUANZPLT" description="Y" /> 			
+same as above
+
+
+===l:10191
+<tableitem name="piloting" code="CAUUSA14" description="Y" />
+CAU+USA14
+589: final String enabUSA_14=(String)CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"USA14");  
+
+
+===l:10231
+<tableitem name="piloting" code="CAUSURCATEXP" description="N" />
+CAU+SURCATEXP
+2,554: String regionBasedFlag =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"SURCATEXP");  
+
+
+===l:10255
+<tableitem name="piloting" code="CAUCN10" description="N" />
+CAU+CN10
+203: <%   String attivoC =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+oUserProfile.getPilotingCode()+"CN10");  
+
+
+===l:10299
+<tableitem name="piloting" code="CAUAGI18" description="Y" />
+CAU+AGI18
+2,981: final String enableAGI18 =  (String) CodeTableManager.getInstance().getDescription(
+"piloting", System.getProperty("aftersales.sector")+ userProfile.getPilotingCode() + "AGI18"); 
+
+ 
+===l:10321
+<tableitem name="piloting" code="CAUUSA84" description="N" />
+CAU+USA84
+4,217: final String pilotingUSA84 = (String) CodeTableManager.getInstance().getDescription(
+"piloting",(System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"USA84"));  
+
+
+===l:10679
+<tableitem name="piloting" code="CAUOP1_15" description="Y" />
+CAU+OP1_15
+349: String attivoOP1_15 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+oUserProfile.getPilotingCode()+"OP1_15");  
+
+
+===l:10775
+<tableitem name="piloting" code="CAUPRIM" description="Y" />
+CAU+PRIM
+not able to find piloting
+
+==l:10798
+<tableitem name="piloting" code="CAU01FV" description="Y" />
+CAU+01FV
+no matches
+
+
+==l:10799
+<tableitem name="piloting" code="CAU99FV" description="Y" />
+CAU+99FV
+no matches
+
+
+==l:10834
+<tableitem name="piloting" code="CAUOP04" description="Y" />
+CAU+OP04
+707: String enable_OP04= CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userPf.getPilotingCode()+"OP04"); 
+
+ 
+===l:10837
+<tableitem name="piloting" code="CAUPSE1037" description="Y" />	
+CAU+PSE1037
+463: String enablePSE1037 =(String) CodeTableManager.getInstance().getDescription(
+"piloting",System.getProperty("aftersales.sector")+userProfile.getPilotingCode()+"PSE1037");  

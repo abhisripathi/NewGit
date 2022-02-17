@@ -1,0 +1,99 @@
+F95286A
+
+In 41 -> not able to find anything, so filled the details from the XL given by sinduja
+In 52 -> button is doubt 
+In 52 -> Action1 & Action3 are having diff parent & child  -> what to update in XL
+In 54 ->Not able to find any matches in the workspace
+In 55-> not able to fin anything in struts-config
+For 65, 66 -> not able to find anything, so filled the details from the XL given by sinduja
+In 38 -> Not able to find anything in code-tables.
+In 107 -> Zero files matched in the workspace
+Once look into 108 -> child transactions
+For 110 -> Zero files matched in the workspace
+For 111 -> Zero files matched in the workspace
+----------------------
+pending -> 38,55,65,66 55-> check for button[checked]
+65, 6 
+<tableitem name="jsp_page" code="UkAp08pagSelezione.jsp"
+			description="ukAp08pagSelezione.do" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAp08pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      32 UK_Governo.UkAp08pagSelezione                      1
+
+  1 record(s) selected.
+ 
+  3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 32"
+  SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      32 AP        UkAp08    Descrizione 2
+
+  1 record(s) selected.
+
+Action1:UkAp08pagModificaOrdineRDAAction
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:PO Amendment
+Button Name: no button
+=======================66. ARUKSV10  -> same as 65 <-============
+
+<tableitem name="jsp_page" code="UkAp08pagSelezione.jsp"
+			description="ukAp08pagSelezione.do" />
+			
+			
+Action1:UkAp08pagModificaOrdineAction 
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:PO Amendment
+Button Name: no button
+=======================55.ARUKP200=============
+Not able to find anything in struts-config
+
+<tableitem name="jsp_page" code="UkPr06pagSearchBod.jsp"
+			description="pages/transactions/UkPr06pagSearchBod.jsp" />
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkPr06pagSearchBod'"
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      61 UK_Governo.UkPr06pagSearchBod                      1
+
+  1 record(s) selected.
+
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 61"
+ 
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      61 PR        UkPr06    Descrizione 2
+
+  1 record(s) selected.
+ 
+Action1:UkPr06pagSearchBodAction
+Module: Planning
+Parent Transaction:Parameters
+Child Transaction:BOD Parameters
+Button Name:Save
+
+====================================
+14(AROPC001) - Double Check
+16(AROPID10) - In OP
+27(AROPOE10) - In OP
+28(AROPOE17) - In OP
+38(AROTTP01) - In Prim
+41(ARUKA300) - In Governo
+67(ARZPP100) - In OP
+68(ARZPP200) - In OP, Prim
+69(ARZPP300) - In OP
+70(ARZPP400) - In OP
+===========================14(AROPC001) - Double Check
+
+<tableitem name="jsp_page" code="UkAq04SelContratto.jsp"
+			description="ukAq04SelContrattoAction.do?submitAction=aggiorna" />
+			
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAq04SelContratto'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      44 UK_Governo.UkAq04SelContratto                      1
+
+  1 record(s) selected.

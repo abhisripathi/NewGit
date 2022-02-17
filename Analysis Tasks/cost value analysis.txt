@@ -1,0 +1,57 @@
+
+		select  COR_COD,COR_NAME,COR_TEL ,COR_EMAIL, COR_FAX from CORRESPONDENT ORDER BY COR_COD
+
+		select  COR_COD,COR_NAME,COR_TEL ,COR_EMAIL, COR_FAX from CORRESPONDENT ORDER BY COR_COD
+		
+		
+
+1. take stream update, -> before  making EAR
+2. create a new EAR for Governo module -> for planning we need Governo Moddule
+3.       
+4. whilie installing EAR -> 1. change context root , shared library references, and class loading and update detection.
+5. we work on t2w environment -> change the local point connection
+           1) change in two places
+
+Local environment point to:
+==========================
+Start your server in debug, Right click on server name -> Administration -> Run Admin console
+1. JDBC Providers -> DEV_na_DB2 -> Change the DB, server and port details
+do the test connection -> not successfull -> theres some mistakes in db/port/server details
+2. J2C Connection Factories -> DEV_na_CICS -> Custom Properties -> Change the DB, server and port details
+make user id F50591A,
+change the supply master.
+
+
+95209289       
+MPO
+BNV05
+
+WorkSocieta != 92 then cost value is 0.
+
+String pilot= System.getProperty("aftersales.pilot") != null ? System.getProperty("aftersales.pilot") : "";
+			String ivecoAus = (String) CodeTableManager.getInstance().getDescription
+					("piloting", System.getProperty("aftersales.sector") + userPf.getWorkSocieta() + "IVEAUS");
+
+if (ordineMon.getTipoOrdine().equals("RDC")
+|| ocItemFornitore.getCrossRegFlag().equals("1") || (("RAS".equalsIgnoreCase(ordineMon.getTipoOrdine()) && ("Y".equalsIgnoreCase(pilotingArg) || "Y".equalsIgnoreCase(pilotingBR))))) {
+
+438-ordineMon.setPrezzoUnit((float) cambioValuta.getImportoConv());
+
+
+
+570-getVendorPrice==0
+576-ordineMon.setVendorPrice(ordineMon.getPrezzoUnit());
+447-ordineMon.setPrezzoUnit((float) ordFornitore
+						.prezzoGestioneAcquisti(userPf.getCorpCode(), ordineMon
+								.getCodWH(), ordineMon.getCodParticolare(),
+								ordineMon.getCodFornitore(), ordineMon
+										.getVendorShipVia(), ordineMon
+										.getMagDest(), new Date(ordineMon
+										.getDataCons().getTime()), userPf
+										.getCurrencyCode()));
+				ordineMon.setPrezzoUnitString(sf.toString(ordineMon
+						.getPrezzoUnit()));
+
+
+
+

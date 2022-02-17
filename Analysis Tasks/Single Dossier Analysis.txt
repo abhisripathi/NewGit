@@ -1,0 +1,67 @@
+========================FD changes Analysis=================
+Action; LrPp01pagProtocollaturaCNHAction
+2) db3"select count(num_documento),NUM_RECLAMO from LINEA_DOCUMENTO where CORP_CODE=1 and COD_SOCIETA=9
+and ANNO_DOCUMENTO=2021 and num_documento=139364 and substr(c_cod_part,1,5) = 'D_666' group by  NUM_RECLAMO"
+
+[1, 9, 2021, 139364]
+
+This  quiry is from callPdfGenerator method.
+1016: invoice file name -> 6109069830
+
+----------------------------
+line:4560-> Method: getVatNr 
+From : Lc001Datapreputil.java
+	
+			db3 "Select LD.SAP_IVA_CODE, LD.FISCAL_REPR
+				From LINEA_DOCUMENTO LD, DOCUMENTO_GEST DG
+				Where LD.CORP_CODE =DG.CORP_CODE
+				And LD.COD_SOCIETA = DG.COD_SOCIETA 
+				And LD.ANNO_DOCUMENTO = DG.ANNO_DOCUMENTO 
+				And LD.NUM_DOCUMENTO = DG.NUM_DOCUMENTO 
+				and DG.CORP_CODE = 1 
+				and DG.COD_SOCIETA = 9
+				and DG.ANNO_DOCUMENTO = 2021
+				and DG.NUM_DOCUMENTO = 139364"
+				
+		[1, 9, 2021, 139364]
+		
+SAP_IVA_CODE FISCAL_REPR
+------------ -----------
+VF           -
+
+  1 record(s) selected.
+-------------------------------------------------------
+In LC001DataPrepUtil.java -> in method: getAddressFieldValue
+
+from line:625 we r getting this-> FR34451736200.
+from line:641 we r getting this-> 45 jrs fin du mois d expédition -
+from line:670 we r getting this->CPT - Carriage paid to
+from l:937 we get -> Invoice Total ->34,57  
+from l;1067 we get -> ETS FLAHAUT
+from l:1081 we get -> 102 route d'Aumale
+from l: 1111     we get->76340 HODENG AU BOSC
+from l:1125 we get whole data -> ETS FLAHAUT
+								 102 route d'Aumale
+								 76340  HODENG AU BOSC France
+from 1179: we get-> ACCRÉDITIF ->this is lcLabel
+
+=========================================uk spa -> single dossier analysis=================
+Method:getShipTo
+in LC001DataPrepUtil
+
+		Select TT.CSPS_CODE 
+		From TRANSCODING_TABLE TT,DOCUMENTO_GEST DG
+		Where char(DG.COD_SOCIETA) = TT.KEY3
+		And TT.KEY1 = 'PDFINDSPED'
+		And TT.KEY2 = DG.COD_TRATT_SCDR
+		and DG.ANNO_DOCUMENTO = ?
+		and DG.NUM_DOCUMENTO = ?
+		and DG.COD_SOCIETA = ?
+		and DG.CORP_CODE =?
+		
+		[2021, 111301, 9, 1]
+		
+		
+AT line:1597 we are having 
+if conditions satisfy avthunai -> so in line 1597 , we are inserting the VATNO as ->IE 3257247BH
+		

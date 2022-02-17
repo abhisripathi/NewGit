@@ -1,0 +1,12 @@
+1. There is no record for this currencycode inthe codetables.
+2. We need to insert the curency code in codetables.
+3. We need to add description also in code tables.xml
+
+
+we need to add this in the code tables.
+<tableitem name="cur-locale" code="071" description="nz,NZ" />
+
+Activity id:CQDB00153061
+J_CIA_EVO_BuybackHeaderInquiry
+
+exception thrown from CGestservice.java from the method:toMyCurrencyString to OpBb02pagSceltaAction.

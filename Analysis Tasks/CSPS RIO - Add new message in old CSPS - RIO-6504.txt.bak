@@ -1,0 +1,7 @@
+bean	                             /main/J_CISSU/J_CIA_EVO/3	                                csps_java/AfterSalesWebAppJavaProject/src/main/java/com/gv/it/bean
+NewMessageCSPSbean.java     	     /main/J_CIA_EVO/1	                                        csps_java/AfterSalesWebAppJavaProject/src/main/java/com/gv/it/bean/NewMessageCSPSbean.java
+Welcome.jsp	                         /main/J_CISSU/J_CIA_EVO/1	                                csps_java/Governo/GovernoWeb/src/main/webapp/pages/templates/Welcome.jsp
+architectDaos.xml	                 /main/J_CMF/J_CPM/J_CIN/J_CISSU/J_CIA/J_CIA_EVO/6	        csps_java/Config/applications/architectDaos.xml
+ChangeGdaModel.java      	         /main/J_CISSU/J_CIA_EVO/1	                                csps_java/AfterSalesWebAppJavaProject/src/main/java/com/gv/it/navigate/model/ChangeGdaModel.java
+ChangeApplAction.java	             /main/J_CISSU/J_CIA_EVO/1	                                csps_java/AfterSalesWebAppJavaProject/src/main/java/com/gv/it/navigate/action/ChangeApplAction.java
+ApplicationResources.properties	     /main/J_CISSU/J_CIA/J_CIA_EVO/12	                        csps_java/AfterSalesServicesJavaProject/src/main/resources/applications/governo/ApplicationResources.properties

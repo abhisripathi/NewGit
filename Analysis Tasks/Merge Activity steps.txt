@@ -1,0 +1,27 @@
+Merge Activity steps
+====================
+Idea: Changes done in one CIA_EVO need to be updated in other stream CIA
+
+step 1: Take the Activity id
+
+step 2: Go to CqWeb -> Search the id in CqWeb.
+      : You will get the file details which were modified.
+	  : Click on Unified Change Management
+	     -> click on view change set -> it prompxts to login.
+	  :Copy the *change set* data 
+	  
+step 3: Take action file | xml |jsp | Model file.
+	  : Consolidation of modified files. Check the version of repeated files. 
+	  : Go to CIA -> search for the above selected file.
+	  : Go to Team -> next show version tree
+	  
+step 4: Comparing Versions with previous version in [CIA_EVO]
+	  : The changes will be shown in  highlited color -> copy them
+	  : go to CIA -> hijack the perticular file -> Modify/Replace the copied line of code.
+	  
+step 5:Check in the file / Create an activity.
+	  
+	  For updating totaly a new  file
+	  ===============================
+	  open the file in CIA_EVO -> copy that class 
+	  go to CIA -> Paste the code in the required class path.

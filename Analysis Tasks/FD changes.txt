@@ -1,0 +1,142 @@
+line:512 Print button in jsp
+jsp:LrPp01pagProtoPraticaCNH
+
+[10:51 am] RASHMITHA, ETTADI
+print method
+
+[10:51 am] RASHMITHA, ETTADI
+.generateInvoice( method
+
+[10:52 am] RASHMITHA, ETTADI
+createDocument
+
+730:callPdfGenerator -> we got code client num from below query
+
+select DG.CORP_CODE, DG.COD_SOCIETA_PROT, DG.ANNO_DOCUMENTO, DG.NUM_DOCUMENTO,DG.COD_CLIENTE_DOC, DG.COD_SOCIETA 
+from DOCUMENTO_GEST DG WHERE DG.CORP_CODE = 1 	AND DG.COD_SOCIETA = 9 	
+AND SUBSTR(TRIM(DG.COD_ENTE_FATT), LENGTH(TRIM(DG.COD_ENTE_FATT))-1,2) = 09 	
+AND SUBSTR(TRIM(DG.COD_REGISTRO), LENGTH(TRIM(DG.COD_REGISTRO))-1,2) = 61 	
+AND DG.NUM_PROTOCOLLO = 069830 AND DG.ANNO_PROTOCOLLO = 2021
+
+[9, 09, 61, 069830, 2021]
+
+1) db3 "select DG.CORP_CODE, DG.COD_SOCIETA_PROT, DG.ANNO_DOCUMENTO, DG.NUM_DOCUMENTO,DG.COD_CLIENTE_DOC, DG.COD_SOCIETA 
+from DOCUMENTO_GEST DG WHERE DG.CORP_CODE = 1 	AND DG.COD_SOCIETA = 9 	
+AND SUBSTR(TRIM(DG.COD_ENTE_FATT), LENGTH(TRIM(DG.COD_ENTE_FATT))-1,2) = 09 	
+AND SUBSTR(TRIM(DG.COD_REGISTRO), LENGTH(TRIM(DG.COD_REGISTRO))-1,2) = 61 	
+AND DG.NUM_PROTOCOLLO = 069830 AND DG.ANNO_PROTOCOLLO = 2021"
+
+CORP_CODE COD_SOCIETA_PROT ANNO_DOCUMENTO NUM_DOCUMENTO COD_CLIENTE_DOC COD_SOCIETA
+--------- ---------------- -------------- ------------- --------------- -----------
+        1                9           2021        139364 F105024                   9
+
+  1 record(s) selected.
+
+
+2) db3"select count(num_documento),NUM_RECLAMO from LINEA_DOCUMENTO where CORP_CODE=1 and COD_SOCIETA=9
+and ANNO_DOCUMENTO=2021 and num_documento=139364 and substr(c_cod_part,1,5) = 'D_666' group by  NUM_RECLAMO"
+
+[1, 9, 2021, 139364]
+
+Both quiries from callPdfGenerator method.
+1016: invoice file name -> 6109069830
+
+check line	696 ;local1Bean
+it has market : as FR
+
+At 683: market is seting
+
+Lc001Dataprep
+4559 goto line
+
+------------------
+line:4560-> Method: getVatNr 
+From : Lc001Datapreputil.java
+	
+			db3 "Select LD.SAP_IVA_CODE, LD.FISCAL_REPR
+				From LINEA_DOCUMENTO LD, DOCUMENTO_GEST DG
+				Where LD.CORP_CODE =DG.CORP_CODE
+				And LD.COD_SOCIETA = DG.COD_SOCIETA 
+				And LD.ANNO_DOCUMENTO = DG.ANNO_DOCUMENTO 
+				And LD.NUM_DOCUMENTO = DG.NUM_DOCUMENTO 
+				and DG.CORP_CODE = 1 
+				and DG.COD_SOCIETA = 9
+				and DG.ANNO_DOCUMENTO = 2021
+				and DG.NUM_DOCUMENTO = 139364"
+				
+		[1, 9, 2021, 139364]
+		
+SAP_IVA_CODE FISCAL_REPR
+------------ -----------
+VF           -
+
+  1 record(s) selected.
+  
+----------------------------------
+
+In LC001DataPrepUtil.java -> in method: getAddressFieldValue
+
+from line:625 we r getting this-> FR34451736200.
+from line:641 we r getting this-> 45 jrs fin du mois d expédition -
+from line:670 we r getting this->CPT - Carriage paid to
+from l:937 we get -> Invoice Total ->34,57  
+from l;1067 we get -> ETS FLAHAUT
+from l:1081 we get -> 102 route d'Aumale
+from l: 1111     we get->76340 HODENG AU BOSC
+from l:1125 we get whole data -> ETS FLAHAUT
+								 102 route d'Aumale
+								 76340  HODENG AU BOSC France
+from 1179: we get-> ACCRÉDITIF ->this is lcLabel								 
+------------------------------------
+Check in putty
+
+			SELECT DESC_RIDOTTA FROM DLR0VAL0.TALR0VAL WHERE COD_VALUTA=?
+			
+			db3 "SELECT DESC_RIDOTTA FROM DLR0VAL0.TALR0VAL WHERE COD_VALUTA=200"
+		
+		   [200]
+
+DESC_RIDOTTA
+------------
+EUR
+
+  1 record(s) selected.		   
+-------------------------		
+In LC001DataPrepUtil.java
+from:732
+
+	db3 "select PC.FLG_PROMO_TERM,PC.NEW_TERM_CODE from PRICING_CNH PC,LINEA_DOCUMENTO LD where ld.CORP_CODE=1 and ld.CORP_CODE=pc.CORP_CODE and 
+	ld.COD_SOCIETA=pc.COD_SOCIETA and ld.NUM_ORDINE=pc.NUM_ORDINE and  ld.NUM_LINEA_ORDINE=pc.NUM_LINEA_ORDINE and pc.NUM_FRAZIONAMENTO=ld.NUM_FRAZIONAMENTO and 
+		ld.ANNO_DOCUMENTO=2021 and  ld.NUM_DOCUMENTO=139364 and ld.COD_SOCIETA=9 fetch first 1 row only"
+	[2021, 139364, 9]
+	FLG_PROMO_TERM NEW_TERM_CODE
+-------------- -------------
+
+
+  1 record(s) selected.
+-------------------------------
+chk in puty
+			select IC.RAGIONE_SOCIALE, IC.RAGIONE_SOCIALE1, IC.INDIRIZZO,
+  			IC.INDIRIZZO_2, IC.INDIRIZZO_3, IC.INDIRIZZO_SEQ_4, IC.CAP, IC.CITTA, IC.PAESE,
+  			(select COUNTRY_NAME
+			from COUNTRY_LANG CL, PARAM_AMMINISTR PA,DOCUMENTO_GEST DG
+			where PA.COD_CLIENTE = DG.COD_CLIENTE_DOC
+			and PA.PREF_CLIENTE =  DG.PREF_CLIENTE_DOC
+			and PA.CORP_CODE = DG.CORP_CODE
+			and PA.COD_SOCIETA = DG.COD_SOCIETA_PROT
+			and PA.COD_CAT_AMM = DG.COD_CAT_AMM
+			and CL.LANG_CODE = PA.COD_LINGUA_FAT
+			and CL.ISO_COUNTRY = IC.PAESE
+			and DG.CORP_CODE = ?
+			AND DG.COD_SOCIETA=?
+			AND DG.ANNO_DOCUMENTO = ?
+			AND DG.NUM_DOCUMENTO = ?
+			fetch first row only
+			),IC.COD_PROVINCIA
+			from INDIRIZZI_CLIENTE IC
+			where IC.TIPO_INDIRIZZO = 'ID'
+			and IC.PREF_CLIENTE = ?
+			and IC.COD_CLIENTE = ? WITH UR
+[1, 9, 2021, 139364, FR13, F105024]		
+
+You have changed the code in line 625---> make sure u change it to previous version.

@@ -1,0 +1,186 @@
+2. csps rio field analysis 
+->  starting debug at 1099 
+-----------------------------SETTERS PAGE - C_BR-------------- 
+<--------------1. 01 - CNH ANZ--------------------->
+5374 - cGestinevasi.java
+method- valorizzaInevasiGlobalPerPdCode
+
+--> //INEVASO URGENTE calculation <-- [ Back Order Quantity ]
+
+5413 - inevasoUrgente = sumBoBdQty - sumItBoQty - inevasoVettFerma;
+[0, 171, 0, 
+
+--> //INEVASO NORMALE calculation <--  [Back Order Quantity ]
+
+			if(inevasiNormali.size() > 0) [0, 102,  22
+			{
+				inevasoNormale = ((BigDecimal) inevasiNormali.get(1)).doubleValue();
+			}
+
+			if(inevasoNormale < 0) {
+				inevasoNormale = 0;
+			}
+
+			if(sumItBoQty > sumBoBdQty) {
+				inevasoVettFerma = 0;
+			}
+
+			if((sumBoBdQty - sumItBoQty) < 0)
+			{
+				inevasoVettFerma = 0;
+				inevasoUrgente = 0;
+			}
+
+			cInevasi.setInevasoVettFerma(inevasoVettFerma);	
+			cInevasi.setInevasoUrgente(inevasoUrgente); //setting URGENT vales
+			cInevasi.setInevasoNormale(inevasoNormale); //setting normal values
+
+-->  //INEVASO TOTALE <---
+			double inevasoTotale = inevasoVettFerma + inevasoUrgente + inevasoNormale;			
+			//cInevasi.setInevasoTotale(inevasoTotale);	
+			//cInevasi.setEntrataILivello(entrataILivello); 
+5452 -			cInevasi.setTransitoIILivelli(transitoIILivelli); ->> this gives us 3 
+
+======================================== logic =======================
+1368 -      if(isPilotedCode){
+				cInevasi = cGestInevasi.valorizzaInevasiGlobalPerPilotedPdCode(corpCode,vndrPoCode,itemPrev,pdCode);
+			}else{
+				cInevasi = cGestInevasi.valorizzaInevasiGlobalPerPdCode(corpCode,vndrPoCode,itemPrev,pdCode);
+			}
+
+			cInevasi = cGestInevasi.recalculateInevasiGlobalPerPdCode(corpCode,vndrPoCode,itemPrev,cInevasi,pdCode);
+in cInevasi we r getting all region complete row values
+
+1402 - future quantity =11 - in else
+			if(isPilotedCode){
+				cInevasi.setFutureQuantity(Integer.parseInt(cGestInevasi.getFutureQtyInfoGlobalPerPilotedPdCode((short)corpCode, vndrPoCode, inputForm.getParticolare(),pdCode)));
+			}else{//11
+				cInevasi.setFutureQuantity(Integer.parseInt(cGestInevasi.getFutureQtyInfoGlobalPerPdCode((short)corpCode, vndrPoCode, inputForm.getParticolare(),pdCode)));	
+			}
+			'
+			
+1308- while(itr.hasNext()){
+					CDatiInevasiPdCode cDatiInevasiPdCode = (CDatiInevasiPdCode)itr.next();
+					String pdCodeCurr = (cDatiInevasiPdCode.getPdCodeDescr().split("-"))[0].trim();
+					int pdCodeCurrInt = Integer.parseInt(pdCodeCurr);
+					
+					if(listOfPdCodePiloted != null && !listOfPdCodePiloted.isEmpty() && listOfPdCodePiloted.containsKey(pdCodeCurrInt)){
+						isPilotedPdCode = true;
+					}else{
+						isPilotedPdCode = false;
+					}
+============================================== values setting && expected qnty in urgent and normal back order qty ===============================
+
+if(String.valueOf(cInevasi.getInevasoVettFerma())!=null)
+			{
+				cInevasi.setInevasoVettFermaString(sf.toString(cInevasi.getInevasoVettFerma()));
+			}
+			if(String.valueOf(cInevasi.getInevasoUrgente())!=null)
+			{
+				cInevasi.setInevasoUrgenteString(sf.toString(cInevasi.getInevasoUrgente()));
+			}
+			if(String.valueOf(cInevasi.getInevasoNormale())!=null)
+			{
+				cInevasi.setInevasoNormaleString(sf.toString(cInevasi.getInevasoNormale()));
+			}
+			if(String.valueOf(cInevasi.getInevasoTotale())!=null)
+			{
+				cInevasi.setInevasoTotaleString(sf.toString(cInevasi.getInevasoTotale()));
+			}
+			if(String.valueOf(cInevasi.getEntrataILivello())!=null)
+			{
+				cInevasi.setEntrataILivelloString(sf.toString(cInevasi.getEntrataILivello()));
+			}
+			if(String.valueOf(cInevasi.getTransitoIILivelli())!=null)
+			{
+				cInevasi.setTransitoIILivelliString(sf.toString(cInevasi.getTransitoIILivelli()));
+			}
+			
+				prevQta = cGestInevasi.ripartisciQtaApertaGlobalPerPdCode(corpCode, vndrPoCode, itemPrev, cInevasi,sf,sv,pdCode);
+				
+				  [unknown, UB_expQty, NB_expQTY, TotalBo_expQty]
+				1=[0,           0,          0,          0       ]
+				2=[0,          171,        86,         257      ]
+				3=[0,           0,         22,         22       ]
+				4=[0,           0,         35,         35       ]
+				5=[0,           0,          0,          0       ]
+				6=[0,           0,          0,          0       ]
+				7=[0,           0,          0,          0       ]
+				
+======================================================lines ======================
+1336- in C_BR - in method -> prelevaDatiInevasiGlobalPerPdCode we get all lines 
+		   prevLines.add(Integer.valueOf(vorLines));
+			prevLines.add(Integer.valueOf(urgentLines));
+			prevLines.add(Integer.valueOf(normaLines));
+			prevLines.add(Integer.valueOf(urgentLines+normaLines));
+			prevLines.add(Integer.valueOf(futureLines)); 
+			1=[0,  0,  0, 0, 0] from else block
+            2=[0, 67, 27, 94, 2]from else block
+			3=[0 , 0, 0,  0,  0]from else block
+			4=[0,  0, 5,  5,  0] from if block
+			5=[0,  0, 0,  0,  0] from if block
+			6=[0,  0, 0,  0,  0]from if block
+			7=[0,  0, 0,  0,  0] from if block
+=====================Receiving/In Transit==========
+if(String.valueOf(cInevasi.getInevasoVettFerma())!=null)
+			{
+				cInevasi.setInevasoVettFermaString(sf.toString(cInevasi.getInevasoVettFerma()));
+			}
+			if(String.valueOf(cInevasi.getInevasoUrgente())!=null)
+			{
+				cInevasi.setInevasoUrgenteString(sf.toString(cInevasi.getInevasoUrgente()));
+			}
+			if(String.valueOf(cInevasi.getInevasoNormale())!=null)
+			{
+				cInevasi.setInevasoNormaleString(sf.toString(cInevasi.getInevasoNormale()));
+			}
+			if(String.valueOf(cInevasi.getInevasoTotale())!=null)
+			{
+				cInevasi.setInevasoTotaleString(sf.toString(cInevasi.getInevasoTotale()));
+			}
+			if(String.valueOf(cInevasi.getEntrataILivello())!=null)
+			{
+				cInevasi.setEntrataILivelloString(sf.toString(cInevasi.getEntrataILivello()));
+			}
+			if(String.valueOf(cInevasi.getTransitoIILivelli())!=null)
+			{
+				cInevasi.setTransitoIILivelliString(sf.toString(cInevasi.getTransitoIILivelli()));
+			}
+			////DTDB00010227 End
+			
+	public CInevasi recalculateInevasiGlobalPerPdCode(int corpCode,int vndrPoCode,ArrayList itemNo, CInevasi dataInput, int pdCode) throws ErrorContainer
+	{
+		try
+		{
+			double inTransitQty = getInevasoSimplifiedGlobalPerPdCode(corpCode, vndrPoCode, itemNo, pdCode);
+			double receivingQty = getQtaEntrataParticolareMagazzinoSimplifiedGlobalPerPdCode(corpCode,itemNo,vndrPoCode, pdCode);
+
+			dataInput.setEntrataILivello(receivingQty); 
+			dataInput.setTransitoIILivelli(inTransitQty);
+
+		}catch (Exception e)
+		{
+			throw new ErrorContainer(e, null, "recalculateInevasiGlobalPerPdCode", "CGestInevasi");
+		}
+
+		return (dataInput);		
+	}
+	we get receiving Qty and transit qty from 
+1371-C_BR		cInevasi = cGestInevasi.recalculateInevasiGlobalPerPdCode(corpCode,vndrPoCode,itemPrev,cInevasi,pdCode);
+  Receiving Qty                        In Transit Qty       
+[0, 201, 0,  10, 0, 0, 0]         [3, 2.030, 0, 0, 0, 0, 0]
+
+u can chek quires from this method 
+5732 - method - valorizzaInevasiGlobalPerPilotedPdCode
+	double entrataILivello = getQtaEntrataParticolareMagazzinoGlobalPerPdCode(corpCode,itemNo,vndrPoCode, pdCode);
+	double transitoIILivelli = getQtaTransitoIILivelliGlobalPerPilotedPdCode(corpCode,itemNo,vndrPoCode, pdCode) - entrataILivello;
+	
+	
+	Quiery for recieving and transit qty 
+	========================================
+	SELECT SUM(A.SKU_IT_WIP_QTY + A.SKU_IN_TRANSIT_QTY) FROM ITEM_BALANCE A, ITEM_HEADER B, BILL_OF_DISTR C WHERE A.CORP_CODE = ?
+	AND C.WH_SOURCE IN (SELECT DISTINCT BOD.WH_CODE FROM BILL_OF_DISTR BOD, ITEM_HEADER IH, WAREHOUSE_PD WP WHERE BOD.CORP_CODE = ?
+	AND BOD.GL_VIRTUAL_WH_CODE = ? AND IH.ITEM_NO IN ('12') AND WP.PD_CODE = ? AND BOD.CORP_CODE = IH.CORP_CODE 
+	AND BOD.CORP_CODE = WP.CORP_CODE AND BOD.BOD_CODE = IH.BOD_CODE AND WP.WH_CODE = BOD.WH_CODE) AND A.ITEM_NO IN ('12') 
+	AND A.CORP_CODE = B.CORP_CODE 
+	AND A.CORP_CODE = C.CORP_CODE AND A.ITEM_NO = B.ITEM_NO AND B.BOD_CODE = C.BOD_CODE AND A.WH_CODE = C.WH_CODE WITH UR 

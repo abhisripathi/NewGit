@@ -1,0 +1,160 @@
+[4/15 3:54 PM] KM, Deepak
+    
+
+HOW TO FIND OUT TRANSACTION NAME FOR A GIVEN ACTION CLASS NAME:
+=====================================================
+
+
+Step 1: 
+--------
+In codetables.xml, Ctrl + F and search the action name that you found for a given piloting code.
+Within the table called <table name="jsp-map">, you will get a match for a tableitem tag with a description value same as your action name.
+For this particular tag, find out the corresponding code attribute value.
+
+
+
+
+Step 2:
+--------
+Find out conv_id from DOP0USA0.TAOP0CVP in putty, using PAGE_CODE in where condition.
+
+
+PAGE_CODE = "front portion of PAGE_CODE"."CODE ATTRIBUTE VALUE THAT YOU FOUND IN STEP 1" 
+
+
+Eg:
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'mercato_client_lr.LrPl00pagVisualizza'"
+
+
+Example putty results:
+
+
+[DEV_EVO_ROW-f01590c:/appl/epg203s/pg2/AE/csps] >
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'mercato_client_lr.LrPl00pagVisualizza'"
+
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+        3       8 mercato_client_lr.LrPl00pagVisualizza              1
+
+
+
+
+
+
+
+
+Step 3:
+--------
+Using this CONV_ID (found in step 2) and using SYSTEM_ID in where condition, find out 
+CONV_TYPE and CONV_CODE from DOP0USA0.TAOP0ACV in putty.
+
+
+db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 3 and CONV_ID = 8"
+
+Example putty results:
+
+
+[DEV_EVO_ROW-f01590c:/appl/epg203s/pg2/AE/csps] >
+db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 3 and CONV_ID = 8"
+
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+        3       8 LrPl      LrPl01    pagina di visualizzazione del plafond
+
+
+
+
+
+
+
+Step 4:
+--------
+CONV_TYPE and CONV_CODE values found in step 3 should be searched in 
+pgmenuconvtype_en_US.properties and pgmenuconv_en_us.properties
+
+
+
+Finally,
+CONV_TYPE in pgmenuconvtype_en_US.properties --> gives you parent transaction name
+CONV_CODE in pgmenuconv_en_us.properties --> gives you child transaction name
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+HOW TO FIND OUT SYSTEM_ID and FRONT PORTION OF PAGE_CODE FOR ANY MODULE:
+===========================================================
+In codetables.xml, within the table called <table name="context-map">, there will be some tableitem tags listed.
+The description attribute of any of these tags will give you the SYSTEM_ID of a given module.
+And the corresponding code attribute value will give you the front portion of the PAGE_CODE, of a given module.
+
+
+Examples:
+
+
+OP module:
+--------------
+front portion of PAGE_CODE --> mercato_client_op
+SYSTEM_ID = 1
+
+
+
+Governo module:
+--------------------
+front portion of PAGE_CODE --> UK_Governo
+SYSTEM_ID = 21
+
+
+
+Finance module:
+-------------------
+front portion of PAGE_CODE --> mercato_client_lr
+SYSTEM_ID = 3
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+​[5/5 11:26 AM] KM, Deepak
+    
+if you have Action A and if you can't find it in codetables.xml, follow this approach:
+
+search Action A in struts-config.xml, copy what is present in its "input" attribute.
+perform a new search struts-config.xml for this copied value and you have to look for actions which have this copied value in their "forward" attributes.
+
+let's say Action B has the above copied value in its "forward" attribute, then copy the name of Action B and search it in codetables.xml
+
+
+    then find Action B's parent and child link
+
+    if Action B is also not found in codetables.xml, you have to repeat the above process.
+    
+
+search Action B in struts-config.xml, copy what is present in its "input" attribute.
+perform a new search struts-config.xml for this copied value and you have to look for actions which have this copied value in their "forward" attributes.
+
+if Action C has the above copied value in its "forward" attribute, then copy the name of Action C and search it in codetables.xml
+
+
+
+
+
+=====================
+1. Code Attribute Value: InvoiceAnalysis.jsp
+
+2. db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'mercato_client_lr.InvoiceAnalysis'"
+
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+        3    5203 mercato_client_lr.InvoiceAnalysis                  1
+
+  1 record(s) selected.
+
+3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 3 and CONV_ID = 5203"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+        3    5203 lrMPI     InAn      Invoice Analysis
+
+4. Child Transaction -> Invoice Analysis.
+   Parent Transaction -> Multiple Invoices Printing 

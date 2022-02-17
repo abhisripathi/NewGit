@@ -1,0 +1,33 @@
+CSPS RIO - Warehouse Details New - Field Analysis
+
+JSP1-UkAp11pagScelta
+
+Java Pages - 2
+1. ukAp11pagSelezione_C_BR
+2. ukAp11pagSelezione
+
+1127 - method(prelevaDatilnevasi) - input form, - debug it
+1
+1205 - line - 
+1228- value mileg FROM getInevasovettferma
+1230 - vvalue milegaa from gett..
+cInevasi - check value 
+1287
+
+553 - forwarding to next jsp(jsp2) from jsp1.
+current page - 1
+754 - 83-global warehouse , 83 milega. 
+1087-last page-3 
+
+1302 - region values coming from - inevasiGlobal = cGestInevasi.getPdCodeList(corpCode);
+1336-prelevaDatiInevasiGlobalPerPdCode- method name - in this method all values are there.
+1289
+
+internet charge code - AMKCO04V
+
+46 - urgent backorder 
+=============================== Warehouse Details Query=====JSP1=====
+line: 754
+method name : getDescrizioneWH -> in this we get from  ValoriMagazzino
+select substr(XCHIABB0,3,2), substr(XDATIBB0,1,25) from DRZ00TBC.TR1BB000 where XCODTAB ='WH00' 
+and XCODPROJ ='RP00' and substr(XCHIABB0,1,2)= ? order by XCHIABB0 ASC -// not region

@@ -1,0 +1,7 @@
+IROPOS02 -> 
+From the response which we got from this program the below two paramaeters length should be equal to zero.
+But it is not zero, that is the reason we are getting this error.
+
+Parameter name: Parameter_ErrorAreaMercatoMercato_ERR_TYPE, Parameter_ErrorAreaMercatoMercato_ERR_ERROR_CODE
+
+

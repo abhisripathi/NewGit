@@ -1,0 +1,23 @@
+CSPS RIO - Warehouse Details New - Field Analysis
+
+JSP1-UkAp11pagScelta
+
+Java Pages - 2
+1. ukAp11pagSelezione_C_BR
+2. ukAp11pagSelezione
+
+1127 - method(prelevaDatilnevasi) - input form, - debug it
+1
+1205 - line - 
+1228- value mileg FROM getInevasovettferma
+1230 - vvalue milegaa from gett..
+cInevasi - check value 
+1287
+
+553 - forwarding to next jsp(jsp2) from jsp1.
+current page - 1
+754 - 83-global warehouse , 83 milega. 
+1087-last page-3 
+
+
+internet charge code - AMKCO04V

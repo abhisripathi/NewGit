@@ -1,0 +1,167 @@
+<%response.setHeader("Cache-Control","no-cache"); 
+response.setHeader("Pragma","no-cache"); 
+response.setDateHeader ("Expires", 0);%>
+<%@ taglib uri="/WEB-INF/struts-bean.tld"  prefix="struts-bean" %>
+<%@ taglib uri="/WEB-INF/struts-tiles.tld" prefix="tiles" %>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
+<%@page import="com.gv.it.framework.ConfigurationSingleton"%>
+<%response.setContentType("text/html;");%><%@ taglib uri="/WEB-INF/struts-html.tld"  prefix="struts-html" %>
+<html:html locale="true">
+<HEAD>
+<script language="JavaScript">
+var timer = null;
+var topurl = top.location;
+function doRefresh() {
+
+        if (top.isloaded == 1) {
+                //alert("waiting "+top.isloaded);
+                clearTimeout(timer);
+                //alert("timer is "+timer);
+                setTimeout("doRefresh()",6000);       
+        }
+        else {
+
+            
+    
+             
+                            document.location='<%=request.getContextPath() + "/pages/frames/" %>footer.jsp';	
+            
+        }
+}
+
+</script>
+<script language="JavaScript">
+//--Returns the current system time as a string in hh:mm am/pm format.
+function nowStr() {
+var now=new Date()
+var hours=now.getHours()
+var minutes=now.getMinutes()
+timeStr=""+((hours > 12) ? hours - 12 : hours)
+timeStr+=((minutes < 10) ? ":0" : ":") + minutes
+timeStr+=(hours >= 12) ? " PM" : " AM"
+return timeStr
+} 
+//--Returns the current date in mm/dd/yy format as a string.
+
+function todayStr() {
+var today=new Date()
+return today.getDate()+"-"+(today.getMonth()+1)+"-"+(today.getFullYear())
+}
+
+</script>
+<style type="text/css">
+.system-tray { background-color: #FFFFFF; font-family: Arial,Helvetica, sans-serif; border-top: 1px groove #32396d; margin-top: 8px; margin-left: 5px; margin-right: 8px; scrollbar-face-color:#CCCCCC; scrollbar-shadow-color:#FFFFFF; scrollbar-highlight-color:#FFFFFF; scrollbar-3dlight-color:#6B7A92; scrollbar-darkshadow-color:#6B7A92; scrollbar-track-color:#E2E2E2; scrollbar-arrow-color:#6B7A92 }
+.column-head {  text-indent: .15em; font-family: Arial,Helvetica, sans-serif; font-size: 70%; font-weight:bold; text-align: left; color: #FFFFFF; background-color:#6B7A92;}  
+
+<%char sectorId= com.gv.it.framework.ConfigurationSingleton.getInstance().getSector().getSectorID(); 
+if (sectorId=='C')
+{
+%>
+.was-message-item  { color: #FFFFFF; font-family: Arial,Helvetica,sans-serif; font-weight:bold; font-size:70.0%; background-color:#bf0e04; } 
+.tray-text {   font-family: Arial,Helvetica, sans-serif; font-size:70.0%; background-color:#bf0e04; color: #FFFFFF;  }
+<%}else{ %>
+.was-message-item  { color: #FFFFFF; font-family: Arial,Helvetica,sans-serif; font-weight:bold; font-size:70.0%; background-color:#1B467D; } 
+.tray-text {   font-family: Arial,Helvetica, sans-serif; font-size:70.0%; background-color:#1B467D; color: #FFFFFF;  }
+<%} %>
+
+</style>
+<title>Menu</title>
+<link rel=stylesheet href="../theme/base.css" type="text/css">
+</head>
+<body class="system-tray">  
+
+  <table border="0" cellpadding="0" cellspacing="0" valign="top" width="100%" summary="Framing Table" >
+    <tr> 
+      <td class="layout-manager" id="notabs"> 
+
+
+<logic:present name="UserProfile" scope="session">
+        <table border="0" cellpadding="2" cellspacing="0" valign="top" width="100%" summary="Framing Table" >
+          <tr>
+          <td class="tray-text" nowrap width=40> 
+            <struts-bean:message key="lblUser" bundle="loginParameters" /> 
+            </td> 
+            <td class="was-message-item" nowrap><jsp:getProperty
+												name="UserProfile" property="userID" />
+            </td>
+	 <td class="tray-text" nowrap width=60> 
+            <struts-bean:message key="lblSocieta" bundle="loginParameters" />
+            </td>
+			<td class="was-message-item" nowrap><struts-bean:define name="companyList" scope="application" id="compListId"/>
+				<!-- MS 26/01/2011 Ez 3699266 problem view company on planning  START +++ -->
+				<% // <struts-bean:write name="compListId" property='<%= ((com.gv.it.bean.UserProfile)session.getAttribute("UserProfile")).getWorkSocietaAsString()% >'/> 
+					if (sectorId == 'C') {
+						out.print("CNH");
+					} else if (sectorId == 'F') {
+						out.print("FGA");
+					} else if (sectorId == 'I') {
+						out.print("IVECO");
+					}
+				%>
+				<!-- MS 26/01/2011 Ez 3699266 problem view company on planning  END #### - -->
+			</td>
+			<td class="tray-text" nowrap width=80> 
+            <struts-bean:message key="btnApplication" bundle="loginParameters" /> : 
+            </td>
+			<td class="was-message-item" nowrap><struts-bean:define name="applList" scope="application" id="appListId"/>
+   <struts-bean:write name="appListId" property='<%= ((com.gv.it.bean.UserProfile)session.getAttribute("UserProfile")).getCurAppl()%>'/></td>
+
+            <td class="tray-text" nowrap width="10%"> 
+            <script>document.write(todayStr())</script>
+            </td>
+            <%
+			if (sectorId=='C')
+				{
+				%>
+					<td class="tray-text" nowrap width="10%"> 
+        		    <!-- AMS_I19_397 Brazzelli - FPT footer cod societa 91 start -->
+					<%String env = System.getProperty("aftersales.env");
+					  String server = System.getProperty("aftersales.server");
+					  com.gv.it.bean.UserProfile uf = (com.gv.it.bean.UserProfile) session.getAttribute("UserProfile");
+					  if (uf.getComboWorkSocieta().equals("91")){ 
+					  		if(env.equals("P")){%>
+					   			<b><FONT style="italic" size="2" face="Verdana">FPT_PROD</FONT></b>
+					   		<%}else{%>
+					   			<b><FONT style="italic" size="2" face="Verdana">FPT_QUA</FONT></b>
+					   		<%} %>
+					<%}else{%>
+					  	    <b><FONT style="italic" size="2" face="Verdana"><%=server%></FONT></b>
+					<%}%>
+        		    <!-- AMS_I19_397 Brazzelli - end -->
+          		  </td>
+            <%} %>
+          </tr>
+         </table>
+</logic:present>
+<logic:notPresent name="UserProfile" scope="session">
+        <table border="0" cellpadding="2" cellspacing="0" valign="top" width="100%" summary="Framing Table" >
+          <tr>
+          <td class="tray-text" nowrap width=40> 
+            <struts-bean:message key="lblUser" bundle="loginParameters" /> : 
+            </td> 
+            <td class="was-message-item" nowrap>-</td>
+	 <td class="tray-text" nowrap width=60> 
+            <struts-bean:message key="lblSocieta" bundle="loginParameters" /> : 
+            </td>
+			<td class="was-message-item" nowrap>-</td>
+			<td class="tray-text" nowrap width=80> 
+            <struts-bean:message key="btnApplication" bundle="loginParameters" /> : 
+            </td>
+			<td class="was-message-item" nowrap>-</td>
+
+            <td class="tray-text" nowrap width="10%"> 
+            <script>document.write(todayStr())</script>
+            </td>
+             <%
+			if (sectorId=='C')
+				{
+				%>
+					<td class="tray-text" nowrap width="10%"> 
+        		    <b><FONT style="italic" size="2" face="Verdana"><%=System.getProperty("aftersales.server")%></FONT></b>
+          		  </td>
+            <%} %>
+          </tr>
+         </table>
+</logic:notPresent>
+</body>
+</html>

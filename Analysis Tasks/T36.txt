@@ -1,0 +1,192 @@
+====Task 36-> AROTP214======
+Action1:PrimCreateSimulationMenuAction
+
+<tableitem name="jsp_page" code="primCreateSimulation.jsp"
+			description="PrimCreateSimulationMenuAction.do?page=load" />
+			
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'prim_cl.primCreateSimulation'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       14    4544 prim_cl.primCreateSimulation                       1
+
+  1 record(s) selected.
+  
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 14 and CONV_ID = 4544"
+ 
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       14    4544 PRMS      prm33     View parts in promotion and create simulation
+
+  1 record(s) selected.
+  
+36-> AROTP214
+Module: PRIM 
+Parent Transaction: Promotions Management
+Child Transaction: View Parts in Promotions and create simulation
+Button Name: 
+
+Action2:InitialStockingListDownloadAction
+--------
+
+<tableitem name="jsp_page" code="initialStockingListExt.jsp"
+				description="InitialStockingListDownloadAction.do?page=load" />
+				
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'prim_cl.initialStockingListExt'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       14    5054 prim_cl.initialStockingListExt                     1
+
+  1 record(s) selected.
+
+3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 14 and CONV_ID = 5054"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       14    5054 ZISL      Isl02     Initial Stocking List External
+
+  1 record(s) selected.
+  
+36-> AROTP214
+Module: PRIM 
+Parent Transaction: Initial Stocking List
+Child Transaction: List Inquiry and Download
+Button Name: 
+============================37. AROTRP03========
+Action1: AddItemAction
+
+<tableitem name="jsp_page" code="OtRe19PagOrdiniSecondari.jsp"
+			description="ordiniSecondari.do" />
+			
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'prim_cl.OtRe19PagOrdiniSecondari'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       14      31 prim_cl.OtRe19PagOrdiniSecondari                   1
+
+  1 record(s) selected.
+
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 14 and CONV_ID = 31"
+ 
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       14      31 OtRe      OtRe19    Secondary orders management
+
+  1 record(s) selected.
+
+37. AROTRP03
+Module: PRIM
+Parent Transaction: Proposal analysis
+Child Transaction: Additional Parts Management
+Button Name:
+
+Action2:ManageSecOrderAction
+=============================38. AROTTP01==============
+Leave it, unable to find.
+
+========================106-HROTPO01======
+
+<tableitem name="jsp_page" code="OtRe30PagApprovazioneProp.jsp"
+			description="generaOrdine.do"/>
+			
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'prim_cl.OtRe30PagApprovazioneProp'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       14      28 prim_cl.OtRe30PagApprovazioneProp                  1
+
+  1 record(s) selected.
+
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 14 and CONV_ID = 28"
+ 
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       14      28 OtRe      OtRe30    Proposal approval
+
+  1 record(s) selected.
+
+			
+106. AROTRP03
+Module: PRIM
+Parent Transaction: Proposal analysis
+Child Transaction: PRIM Order Generation
+Button Name:
+
+=======================62.ARUKS100
+
+<tableitem name="jsp_page" code="UkAp07pagSelezione.jsp"
+			description="ukAp07pagSelezione.do" />
+			
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAp07pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      31 UK_Governo.UkAp07pagSelezione                      1
+
+  1 record(s) selected.
+  
+   3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 31"
+   
+  SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      31 AP        UkAp07    Descrizione 2
+
+  1 record(s) selected.
+  
+Action1:UkAp07pagSelezione2Action
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:PO Entry
+Button Name: not able to find
+
+<tableitem name="jsp_page" code="UkAp07pagSelezione.jsp"
+			description="ukAp07pagSelezione.do" />
+			
+<tableitem name="jsp_page" code="UkAp06pagSelezione.jsp"
+			description="ukAp06pagSelezioneAction.do?submitAction=aggiorna" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAp06pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      30 UK_Governo.UkAp06pagSelezione                      1
+
+  1 record(s) selected.
+  
+db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 30"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      30 AP        UkAp06    Descrizione 2
+
+  1 record(s) selected.
+  
+Action2:UkAp07pagSelezione2Action_C_BR  
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:Display PO
+Button Name:not able to find 
+
+ 
+1. <tableitem name="jsp_page" code="UkAp06pagSelezione.jsp"
+			description="ukAp06pagSelezioneAction.do?submitAction=aggiorna" />   + same as in action1
+			
+2. <tableitem name="jsp_page" code="UkAp07pagSelezione.jsp"
+			description="ukAp07pagSelezione.do" />           + same as in action1
+			
+============================== pending tasks ====
+ 1 - 5 -> finance
+ 11, 12, 13, 14
+ 17, 18, 19, 20
+ 24
+ 27 ,28
+ 38
+ 51
+ 53, 54, 55
+ 57
+ 67- 70, 123-124-> prod definition
+ 74(n/a), 75-76 -> finance
+ 78->buyback
+ 79-82 , 84-87, 91-92, 104, 113-116, 119-120, 126-> OP
+ 107-108, 110-111, 125 -> planning

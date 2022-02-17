@@ -1,0 +1,251 @@
+<%@page info="myPage" language="java"%>
+<%@ taglib uri="/WEB-INF/struts-tiles.tld" prefix="tiles" %>
+<%@ taglib uri="/WEB-INF/struts-bean.tld"  prefix="struts-bean" %>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="struts-logic" %>
+<%response.setContentType("text/html;");%><%@ taglib uri="/WEB-INF/struts-html.tld"  prefix="struts-html" %>
+<%@ taglib uri="/WEB-INF/struts-layout.tld"  prefix="struts-layout" %>
+<%@ taglib uri="/WEB-INF/mio_tag.tld"  prefix="myLayout" %>
+<tiles:insert page="/pages/templates/base.jsp" flush="true">
+<tiles:put name="title"  value="" /> 
+<tiles:put name="header" value="/templates/header.jsp" /> 
+<tiles:put name="menu"   value="/templates/menu.jsp" /> 
+<tiles:put name="body"   type="String">
+<struts-html:form action="/ukAq04ModContrattoAction">
+<struts-logic:messagesPresent>
+<center>
+		<table><tr>
+		<TD vAlign=top Align=center width="100%" height=60 class="LabelsRed">
+		<struts-html:errors bundle="errorMessage" /></TD></tr></table>
+		<br>
+		<br>
+</center>
+</struts-logic:messagesPresent>
+<center>
+<struts-logic:iterate name="ukAq04GestContrattoForm" property="ccontrattoFornitoreSelezionato" id="ccontrattoFornitoreSelezionato">
+
+<table border="1" width="85%" cellspacing="0" cellpadding="0">
+  <tr>
+    <th class="titybb">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblFornitore" />
+    </b></th>
+    <td colspan="3" class="DataTableSpecial">
+    <struts-layout:write name="ccontrattoFornitoreSelezionato" property="codFornitoreString"  /> - 
+     <struts-layout:write name="ccontrattoFornitoreSelezionato" property="descrFornitore"  />
+    </td>
+  </tr>
+  <tr>
+    <th class="titybb">
+    	<b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblParticolare" />
+    </b
+    </th>
+    <td colspan="3" class="DataTableSpecial">
+    <struts-layout:write  property="lblCodParticolare" /> -  <struts-layout:write  property="descrPart" />
+    </td>
+  </tr>
+ <tr>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblNumero" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    	<struts-layout:write name="ccontrattoFornitoreSelezionato" property="numero" />
+    </td>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblDataUltimaMod" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    	<struts-layout:write name="ccontrattoFornitoreSelezionato" property="ultimaModString" />
+    </td>
+  </tr>
+  <tr>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblStato" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-layout:write name="ccontrattoFornitoreSelezionato" property="descrStatoLineta" />
+    </td>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblDataCont" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-layout:write name="ccontrattoFornitoreSelezionato" property="dataUltimaContratt" />
+    </td>
+  </tr>
+  <tr>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblPercAss" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-html:text name="ccontrattoFornitoreSelezionato"  property="percAssString" indexed="true" />
+    </td>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblRespAcq" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+     <struts-html:select size="1" name="ccontrattoFornitoreSelezionato" property="buyer"  indexed="true">      			
+		<struts-html:options   collection="buyerColl" property="strCodice" labelProperty="strDescrizione"  />	
+     </struts-html:select>
+    </td>
+  </tr>
+   <tr>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblProgrammazione" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+     <struts-html:select size="1" name="ccontrattoFornitoreSelezionato" property="wmString"  indexed="true">      			
+		<struts-html:options   collection="wmStringColl" property="value" labelProperty="label"  />	
+     </struts-html:select>
+    </td>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblLeadTime" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-html:text name="ccontrattoFornitoreSelezionato"  property="ltpart" indexed="true" />
+    </td>
+  </tr>
+  <tr>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblMagDest" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+     <struts-html:select size="1" name="ccontrattoFornitoreSelezionato" property="magDesc"  indexed="true">      			
+		<struts-html:options   collection="magDescColl" property="label" labelProperty="value"  />	
+     </struts-html:select>
+    </td>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblMetodoSped" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+     <struts-html:select size="1" name="ccontrattoFornitoreSelezionato" property="metodoSped"  indexed="true">      			
+		<struts-html:options   collection="metodoSpedColl" property="strCodice" labelProperty="strDescrizione"  />	
+     </struts-html:select>
+    </td>
+  </tr>
+  <tr>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblLMin" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-html:text name="ccontrattoFornitoreSelezionato"  property="lminString" indexed="true" />
+    </td>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblFobCod" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-html:select size="1" name="ccontrattoFornitoreSelezionato" property="fobCod"  indexed="true">      			
+		<struts-html:options   collection="fobCodColl" property="strCodice" labelProperty="strDescrizione"  />	
+     </struts-html:select>
+    </td>
+  </tr>
+  <tr>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblLMult" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-html:text name="ccontrattoFornitoreSelezionato"  property="lmultString" indexed="true" />
+    </td>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblDataInizio" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-html:text name="ccontrattoFornitoreSelezionato"  property="dataInizioString" indexed="true" />
+    </td>
+  </tr>
+  <tr>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblMotivazione" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+     <struts-html:select size="1" name="ccontrattoFornitoreSelezionato" property="tipoRel"  indexed="true">      			
+		<struts-html:options   collection="tipoRelColl" property="strCodice" labelProperty="strDescrizione"  />	
+     </struts-html:select>
+    </td>
+    <th class="titybb" width="25%">
+    <b>
+    	<struts-bean:message bundle="governoMessages" key="UkAq04.lblRifForn" />
+    </b
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-html:text name="ccontrattoFornitoreSelezionato"  property="rifForn" indexed="true" />
+    </td>
+  </tr>
+   <tr>
+    <th class="titybb" width="25%">
+    <struts-bean:message bundle="governoMessages" key="UkAq04.cimb" />
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    <struts-html:select size="1" name="ccontrattoFornitoreSelezionato" property="cimb"  indexed="true">      			
+		<struts-html:options   collection="cimbColl" property="strCodice" labelProperty="strDescrizione"  />	
+     </struts-html:select>
+    </td>
+    <th class="titybb" width="25%">
+    
+    </th>
+    <td class="DataTableSpecial" width="25%">
+    
+    </td>
+  </tr>
+</table>
+
+<center>
+<table border="0" cellspacing="1" >
+	<tr>
+		<td>
+			<struts-html:submit property="submitAction" styleClass="submit" styleId="btnSalva"  >
+				<struts-bean:message bundle="governoMessages" key="UkAq04.btnSalva"/>
+			</struts-html:submit>
+		</td>
+		<td>
+			<struts-html:reset property="submitAction" styleClass="submit" >
+				<struts-bean:message bundle="governoMessages" key="UkAq04.btnAnnulla"/>
+			</struts-html:reset>
+		</td>
+		<td>
+			<struts-html:submit property="submitAction" styleClass="submit" >
+				<struts-bean:message bundle="governoMessages" key="UkAq04.btnIndietro"/>
+			</struts-html:submit>
+		</td>
+	</tr>
+	
+</table>
+</center>
+<br>
+<br>
+</struts-logic:iterate>
+</center>
+
+</struts-html:form>
+</tiles:put>
+<tiles:put name="footer" value="/templates/footer.jsp" />
+</tiles:insert>

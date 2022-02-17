@@ -1,0 +1,514 @@
+=====61.ARUKP700================
+
+<tableitem name="jsp_page" code="UkVs04pagSelezione.jsp"
+			description="ukVs04pagDatiMagAction.do?submitAction=Start" />
+			
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkVs04pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      94 UK_Governo.UkVs04pagSelezione                      1
+
+  1 record(s) selected.
+  
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 94"
+ 
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      94 VS        UkVs04    Descrizione 2
+
+  1 record(s) selected.
+  
+Module: Planning
+Parent Transaction:Display
+Child Transaction:Warehouse Details
+Button Name:Display
+
+============================63. ARUKS200============================
+
+<tableitem name="jsp_page" code="UkAn02pagSelezione.jsp"
+			description="ukAn02pagSelezioneAction.do?submitAction=aggiorna" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAn02pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      20 UK_Governo.UkAn02pagSelezione                      1
+
+  1 record(s) selected.
+
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 20"
+ 
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      20 AN        UkAn02    Descrizione 2
+
+  1 record(s) selected.
+
+Action1:UkAn02pagElencaFornitoriAction  
+Module: Planning
+Parent Transaction:Master Data
+Child Transaction:Part/Supplier Master
+Button Name: save
+
+===================64. ARUKS600==============================
+
+<tableitem name="jsp_page" code="UkAp07pagSelezione.jsp"
+			description="ukAp07pagSelezione.do" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAp07pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      31 UK_Governo.UkAp07pagSelezione                      1
+
+  1 record(s) selected.
+  
+   3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 31"
+   
+   SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      31 AP        UkAp07    Descrizione 2
+
+  1 record(s) selected.
+
+Action1:UkAp07pagSelezione2Action  
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:PO Entry
+Button Name:not able to find
+
+Action2: UkAp07pagSelezione2Action_C_BR
+<tableitem name="jsp_page" code="UkAp07pagSelezione.jsp"
+			description="ukAp07pagSelezione.do" />  + same sa action1
+
+<tableitem name="jsp_page" code="UkAp06pagSelezione.jsp"
+			description="ukAp06pagSelezioneAction.do?submitAction=aggiorna" />
+			
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAp06pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      30 UK_Governo.UkAp06pagSelezione                      1
+
+  1 record(s) selected.
+  
+db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 30"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      30 AP        UkAp06    Descrizione 2
+
+  1 record(s) selected.
+  
+Action2:UkAp07pagSelezione2Action_C_BR  
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:Display PO
+Button Name:not able to find 
+
+Action3: UkAp07pagSelezione2Action_I_BR
++ same as action2 +
+
+=======================65.ARUKS700==================================[25-01-22]
+not able to find anything in codetables via action clss.
+
+=======================66.ARUKSV10==================================
+not able to find anything in codetables via action clss.
+
+======================49.ARUKF300===================================
+Action1:UkPr03pagSelMatriceMovimentazione 
+
+<tableitem name="jsp_page"
+			code="UkPr03pagSelMatriceMovimentazione.jsp"
+			description="ukPr03pagSelMatriceMovimentazione.do?submitAction=Start" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkPr03pagSelMatriceMovimentazione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      58 UK_Governo.UkPr03pagSelMatriceMovimentazione       1
+
+  1 record(s) selected.
+
+3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 58"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      58 PR        UkPr03    Descrizione 2
+
+  1 record(s) selected.
+
+Action1:UkPr03pagSelMatriceMovimentazione  
+Module: Planning
+Parent Transaction:Parameters
+Child Transaction:ABC Handling
+Button Name:Save
+
+----------------
+Action: UkPr10GestAnticipationRulesAction + we did the file search + we got below 3 [action1, action2, action2]
+
+action1:UkPr10AdvSeasParamAction
+<tableitem name="jsp_page"
+			code="UkPr10pagSelezioneSeasonalRule.jsp"
+			description="ukPr10GestioneAnnunci.do?submitAction=Start" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkPr10pagSelezioneSeasonalRule'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      65 UK_Governo.UkPr10pagSelezioneSeasonalRule          1
+
+  1 record(s) selected.
+  
+3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 65"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      65 PR        UkPr10    Descrizione 2
+
+  1 record(s) selected.
+
+Action1:UkPr10AdvSeasParamAction  
+Module: Planning
+Parent Transaction:Parameters
+Child Transaction:Foreseeing <br> Rules
+Button Name:
+
+Action2:UkPr10GestAnticipationRulesAction  + not able to find anything in struts-config +
+
+
+Action3:UkPr12pagInsPLAction
+<tableitem name="jsp_page" code="UkPr12pagSelPL.jsp"
+			description="ukPr12GestionePL.do?submitAction=Start" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkPr12pagSelPL'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      67 UK_Governo.UkPr12pagSelPL                          1
+
+  1 record(s) selected.
+  
+  3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 67"
+  
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      67 PR        UkPr12    Descrizione 2
+
+  1 record(s) selected.
+  
+Action3:UkPr12pagInsPLAction  
+Module: Planning
+Parent Transaction:Parameters
+Child Transaction:Product Line <br> Management
+Button Name:
+=========================50.ARUKF500========================
+Action1: UkPv02pagModificaAction
+<tableitem name="jsp_page" code="UkPv02pagSelezione.jsp"
+			description="ukPv02pagInitSelezione.do" />
+			
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkPv02pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      70 UK_Governo.UkPv02pagSelezione                      1
+
+  1 record(s) selected.
+
+3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 70"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      70 PV        UkPv02    Descrizione 2
+
+  1 record(s) selected.
+  
+Action1: UkPv02pagModificaAction 
+Module: Planning
+Parent Transaction:Forecasts
+Child Transaction:Forecast Forcing
+Button Name:Save
+
+===================51.ARUKG100====================
+
+<tableitem name="jsp_page" code="UkBs01pagSelezioneGlobal.jsp"
+			description="ukBs01pagInitSelezioneGlobal.do" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkBs01pagSelezioneGlobal'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21     118 UK_Governo.UkBs01pagSelezioneGlobal                1
+
+  1 record(s) selected.
+  
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 118"
+ 
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21     118 BS        UkBs01Gl  Global DPL Critical Order Selection
+
+  1 record(s) selected.
+  
+Action1: UkBs03pagApprovazioneInitGlobalAction 
+Module: Planning
+Parent Transaction:Deployment
+Child Transaction:Global DPL Critical Order Selection 
+Button Name:Save
+====================52.ARUKL100======================
+<tableitem name="jsp_page" code="UkVs11pagSelezione.jsp"
+			description="ukVs11pagSelezioneAction.do?submitAction=Start" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkVs11pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21     100 UK_Governo.UkVs11pagSelezione                      1
+
+  1 record(s) selected.
+
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 100"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21     100 VS        UkVs11    Descrizione 2
+
+  1 record(s) selected.
+
+
+Action1:UkVs11pagSelezioneAction 
+Module: Planning
+Parent Transaction:Display
+Child Transaction:DPL Plan
+Button Name:
+-------
+Action2:UkVs11pagSelezioneAction
+<tableitem name="jsp_page" code="UkVs11pagSelezione.jsp"    + same as Action1 +
+			description="ukVs11pagSelezioneAction.do?submitAction=Start" />
+
+Action3:UkBs03pagApprovazioneInitAction
+<tableitem name="jsp_page" code="UkBs01pagSelezione.jsp"
+			description="ukBs01pagInitSelezione.do" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkBs01pagSelezione'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      53 UK_Governo.UkBs01pagSelezione                      1
+
+  1 record(s) selected.
+
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 53"
+
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      53 BS        UkBs01    Descrizione 2
+
+  1 record(s) selected.
+
+Action3:UkBs03pagApprovazioneInitAction
+Module: Planning
+Parent Transaction:Deployment
+Child Transaction:DPL Critical Order Selection
+Button Name:
+=====================53.ARUKL400==============================
+
+<tableitem name="jsp_page" code="pagConsAttivita.jsp"
+			description="CDpagInsDisegno.do?submitAction=StartV" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.pagConsAttivita'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21       1 UK_Governo.pagConsAttivita                         1
+
+  1 record(s) selected.
+
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 1"
+ 
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21       1 CD        CON00     Descrizione 2
+
+  1 record(s) selected.
+
+Action1:CDpagInsDisegno
+Module: Planning
+Parent Transaction:Direct Shipment
+Child Transaction:Quantity Insertion
+Button Name:Confirm
+=======================54.ARUKL500=====================
+Not able to find any matches in the workspace
+=======================55.ARUKP200=============
+Not able to find anything in struts-config
+
+<tableitem name="jsp_page" code="UkPr06pagSearchBod.jsp"
+			description="pages/transactions/UkPr06pagSearchBod.jsp" />
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkPr06pagSearchBod'"
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      61 UK_Governo.UkPr06pagSearchBod                      1
+
+  1 record(s) selected.
+
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 61"
+=======================56.ARUKP400
+
+<tableitem name="jsp_page" code="UkAn05pagScelta.jsp"
+			description="ukAn05pagInsAnagPartAction.do?submitAction=aggiorna" />
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAn05pagScelta'"
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      23 UK_Governo.UkAn05pagScelta                         1
+
+  1 record(s) selected.
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 23"
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      23 AN        UkAn05    Descrizione 2
+
+  1 record(s) selected.
+Action1:UkAn05pagInsAnagPartAction
+Module: Planning
+Parent Transaction:Master Data
+Child Transaction:Part - Multiple
+Button Name:Update
+=====================57. ARUKP410============
+<tableitem name="jsp_page" code="UkAn04PagScelta.jsp"
+			description="ukAn04pagInsVarRelItemVendorMultiplaAction.do?submitAction=aggiorna" />
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAn04PagScelta'"
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      22 UK_Governo.UkAn04PagScelta                         1
+
+  1 record(s) selected.
+ 3. db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 22"
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      22 AN        UkAn04    Descrizione 2
+
+  1 record(s) selected.
+Action1:UkAn04pagInsVarRelItemVendorMultiplaAction
+Module: Planning
+Parent Transaction:Master Data
+Child Transaction:Part/Supplier - Multiple
+Button Name:Enter, Update
+=================107. HRUKB019==========
+Zero files matched in the workspace
+=================108. HRUKB055==========
+
+<tableitem name="jsp_page" code="UkAp03pagFirstPage.jsp"
+			description="ukAp03pagSearchPiano.do?from=menu" />
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAp03pagFirstPage'"		
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      27 UK_Governo.UkAp03pagFirstPage                      1
+
+  1 record(s) selected.
+			
+db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 27"
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      27 AP        UkAp03    Descrizione 2
+
+  1 record(s) selected.
+
+Action1:UkAp03pagSearchVisualizzaPianoAction
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:Supp. Plan Approval
+Button Name: Insert PO, Save Plan (action2 button name diff, all same)
+
+
+<tableitem name="jsp_page" code="UkAp15Scelta.jsp"
+			description="ukAp15Scelta.do" />
+
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAp15Scelta'"
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      39 UK_Governo.UkAp15Scelta                            1
+
+  1 record(s) selected.
+  db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 39"
+ 
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      39 AP        UkAp15    Descrizione 2
+
+  1 record(s) selected.
+Action3:UkAp15InsMultiploRaSRdCAction
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:PO Entry - Multiple
+Button Name: not found
+
+<tableitem name="jsp_page" code="UkUp19pagPurchaseOrders.jsp"
+			description="pages/transactions/UkUp19pagPurchaseOrders.jsp" />
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkUp19pagPurchaseOrders'"
+
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      90 UK_Governo.UkUp19pagPurchaseOrders                 1
+
+  1 record(s) selected.
+db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 90"
+SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      90 UP        UkUp19    Descrizione 2
+
+  1 record(s) selected.
+Action3:UkAp15InsMultiploRaSRdCAction
+Module: Planning
+Parent Transaction:Massive upload
+Child Transaction:Purchase Orders
+Button Name: not found
+
+<tableitem name="jsp_page" code="UkAp07pagSelezione.jsp"
+			description="ukAp07pagSelezione.do" />
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkAp07pagSelezione'"
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      31 UK_Governo.UkAp07pagSelezione                      1
+
+  1 record(s) selected.
+  db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 31"
+  SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      31 AP        UkAp07    Descrizione 2
+
+  1 record(s) selected.
+Action6:UkAp15InsMultiploRaSRdCAction
+Module: Planning
+Parent Transaction:Procurement
+Child Transaction:PO Entry
+Button Name: not found
+
+==================================110. HRUKL400============
+No matches 
+==================================111. HRUKM400============
+No matches
+=====================125. KRUKX001======================
+
+<tableitem name="jsp_page" code="UkPv01pagSelezione.jsp"
+			description="ukPv01pagInitSelezione.do" />
+db3 "select * from DOP0USA0.TAOP0CVP where PAGE_CODE = 'UK_Governo.UkPv01pagSelezione'"
+SYSTEM_ID CONV_ID PAGE_CODE                                          FLG_FIRST_PAGE
+--------- ------- -------------------------------------------------- --------------
+       21      69 UK_Governo.UkPv01pagSelezione                      1
+
+  1 record(s) selected.
+ db3 "select * from DOP0USA0.TAOP0ACV where SYSTEM_ID = 21 and CONV_ID = 69"
+ SYSTEM_ID CONV_ID CONV_TYPE CONV_CODE CONV_DESCRIPTION
+--------- ------- --------- --------- --------------------------------------------------
+       21      69 PV        UkPv01    Descrizione 2
+
+  1 record(s) selected.
+  
+Action1:UkPv01pagSelezioneAction
+Module: Planning
+Parent Transaction:Forecasts
+Child Transaction:Display Forecast Details
+Button Name: not found
+=============================================Done All Planning============================================
+

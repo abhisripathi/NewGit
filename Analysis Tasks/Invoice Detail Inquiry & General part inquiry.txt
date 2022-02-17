@@ -1,0 +1,68 @@
+
+			SELECT contr.NUM_CONTRATTO, contr.DESC_CONTRATTO,  contr.FLG_STANDARD FROM
+			DOP0CNT0.TAOP0CNT contr ,DOP0CNT0.TAOP0CTM CTM	,DOP0ANC0.TAOP0PAM PAM WHERE
+			contr.CORP_CODE = CTM.CORP_CODE AND contr.COD_SOCIETA =
+			CTM.COD_SOCIETA AND contr.NUM_CONTRATTO = CTM.NUM_CONTRATTO
+			AND contr.PREF_CLIENTE = ? AND contr.COD_CLIENTE = ? AND
+			CTM.TIPO_ORDINE =? AND contr.CORP_CODE = 1 AND contr.COD_SOCIETA
+			= ? AND contr.STATO_CONTRATTO = 'V' AND contr.DATA_INIZ_VALID <= ? AND
+			contr.DATA_FINE_VALID >= ?
+			AND PAM.COD_CLIENTE = contr.COD_CLIENTE
+			AND PAM.PREF_CLIENTE = contr.PREF_CLIENTE
+			AND PAM.COD_CAT_AMM = contr.COD_CAT_AMM
+			AND contr.TIPO_FORNITURA NOT IN ('BB','DD')
+			AND PAM.STATO_RECORD='1'
+		 AND contr.FLG_ABIL_UTENTE = ?  order by   contr.FLG_STANDARD desc, contr.NUM_CONTRATTO 
+		 
+		 [IT55, 0065998, 43, 91, 2022-02-10, 2022-02-10, E]
+		 
+		 
+		 
+			SELECT contr.NUM_CONTRATTO, contr.DESC_CONTRATTO,
+			tomku.TIPO_ORDINE , cpart.FLG_STANDARD FROM DOP0CNT0.TAOP0CNT contr,
+			DOP0CNT0.TAOP0CTM tomku, DOP0CNT0.TAOP0CPA cpart,
+			DOP0ANC0.TAOP0PCO cli,DOP0ANC0.TAOP0PAM PAM WHERE cli.PREF_CLIENTE = ? AND
+			cli.COD_CLIENTE = ? AND cli.CORP_CODE = 1 AND
+			tomku.TIPO_ORDINE = ? AND cli.COD_SOCIETA = ? AND
+			contr.STATO_CONTRATTO = 'V' AND contr.DATA_INIZ_VALID <=
+			? AND contr.DATA_FINE_VALID >= ? AND contr.CORP_CODE = tomku.CORP_CODE AND
+			contr.COD_SOCIETA = tomku.COD_SOCIETA AND
+			contr.NUM_CONTRATTO = tomku.NUM_CONTRATTO AND
+			contr.CORP_CODE = cpart.CORP_CODE AND contr.COD_SOCIETA =
+			cpart.COD_SOCIETA AND contr.NUM_CONTRATTO =
+			cpart.NUM_CONTRATTO AND tomku.CORP_CODE = cpart.CORP_CODE
+			AND tomku.COD_SOCIETA = cpart.COD_SOCIETA AND
+			tomku.NUM_CONTRATTO = cpart.NUM_CONTRATTO AND
+			cli.COD_CAT_COMM = cpart.COD_CAT_COMM AND cli.CORP_CODE =
+			cpart.CORP_CODE AND cli.COD_SOCIETA = cpart.COD_SOCIETA
+			AND PAM.COD_CLIENTE = CLI.COD_CLIENTE
+			AND contr.TIPO_FORNITURA NOT IN ('BB','DD')
+			AND PAM.PREF_CLIENTE = CLI.PREF_CLIENTE
+			AND PAM.COD_CAT_AMM = contr.COD_CAT_AMM
+			AND PAM.STATO_RECORD='1'
+			AND PAM.COD_SOCIETA = cli.COD_SOCIETA
+		 AND contr.FLG_ABIL_UTENTE = ?  order by cpart.FLG_STANDARD desc,contr.NUM_CONTRATTO 
+		 
+		 [IT55, 0065998, 43, 91, 2022-02-10, 2022-02-10, E]
+		 
+		 Any one of the query must have the valus.
+		 
+=------------------------------
+DE08
+0242966		 
+------------
+
+		SELECT * FROM TRANSCODING_TABLE 
+		WHERE KEY1='DOA' 
+		AND KEY2=? 
+		AND (SELECT count(KEY2) FROM TRANSCODING_TABLE 
+				WHERE KEY1='DOA_USER_N' 
+				AND KEY2=?
+				AND KEY3='1') = 0
+		WITH UR   
+[DE08, WU059]
+------------------------
+from line 2755 it jumped to exception block
+in CGestOrdSimulationHeaderModel-----it is throwing exception to 
+this OpOeOs01pagSimHeaderAction_C_BR page at line->1050 it is catching
+

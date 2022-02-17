@@ -1,0 +1,153 @@
+http://160.220.192.242/cqweb/ - cqdb link
+
+bean	                             /main/J_CISSU/J_CIA_EVO/3	                                csps_java/AfterSalesWebAppJavaProject/src/main/java/com/gv/it/bean
+NewMessageCSPSbean.java     	     /main/J_CIA_EVO/1	                                        csps_java/AfterSalesWebAppJavaProject/src/main/java/com/gv/it/bean/NewMessageCSPSbean.java
+Welcome.jsp	                         /main/J_CISSU/J_CIA_EVO/1	                                csps_java/Governo/GovernoWeb/src/main/webapp/pages/templates/Welcome.jsp
+architectDaos.xml	                 /main/J_CMF/J_CPM/J_CIN/J_CISSU/J_CIA/J_CIA_EVO/6	        csps_java/Config/applications/architectDaos.xml
+ChangeGdaModel.java      	         /main/J_CISSU/J_CIA_EVO/1	                                csps_java/AfterSalesWebAppJavaProject/src/main/java/com/gv/it/navigate/model/ChangeGdaModel.java
+ChangeApplAction.java	             /main/J_CISSU/J_CIA_EVO/1	                                csps_java/AfterSalesWebAppJavaProject/src/main/java/com/gv/it/navigate/action/ChangeApplAction.java
+ApplicationResources.properties	     /main/J_CISSU/J_CIA/J_CIA_EVO/12	                        csps_java/AfterSalesServicesJavaProject/src/main/resources/applications/governo/ApplicationResources.properties
+
+
+==========NewMessageCSPSbean.java====
+this is a class -> under this package com.gv.it.bean;
+this clss has the setters like, email id - new msg - url for new csps2.0
+=======Welcome.jsp======
+there 4 changes
+1.<%@page import="com.gv.it.bean.NewMessageCSPSbean"%>
+this is a page directive with import attribute 
+2. empty line
+3. <jsp:useBean id="NewCSPSMsg" scope="session"
+	class="com.gv.it.bean.NewMessageCSPSbean" />
+    so we u this action tag to instatiate the bean class
+	its scope is set to session -> means we can use this bean from any jsp in the same session
+	
+4.<logic:equal name="NewCSPSMsg" property="cspsMsg" value="true">
+<table>
+<tr>
+<td  width="100%"  height="60" class="error" font-size="200">
+<struts-bean:message key="MsgNewCSPS" bundle="governoMessages"/>
+<br>
+<struts-bean:message key="Msg2NewCSPS" bundle="governoMessages"/><jsp:getProperty name="NewCSPSMsg" property="cspsEditEmail" /> 
+<br>
+<struts-bean:message key="Msg3NewCSPS" bundle="governoMessages"/>
+<a href="<jsp:getProperty name="NewCSPSMsg" property="cspsUrl"/>" target="_blank" style="color:'0000aa';text-decoration:underline"><jsp:getProperty name="NewCSPSMsg" property="cspsUrl" /></a>
+</td>
+</tr>
+</table>
+</logic:equal>
+<logic:equal name="NewCSPSMsg" property="cspsMsg" value="false">
+<br>
+</logic:equal>
+
+======architectDaos.xml=========
+there is one change
+1. there is query added here for 
+<!-- CHANGES FOR AGI-1031 - COUNTRY CODE FOR BT CHAT - STARTS -->
+		<statement xml:space="preserve" name="CGestPermission.getCountryCodeForBTChat">
+			SELECT A.PAESE FROM DOP0ANC0.TAOP0ANC A , TATB0C35 C 
+			WHERE A.NAZIONE = C.PAESE AND PREF_CLIENTE = ? AND COD_CLIENTE = ? WITH UR
+		</statement>
+		<!-- CHANGES FOR AGI-1031 - COUNTRY CODE FOR BT CHAT - ENDS -->
+====ChangeGdaModel.java====
+there are 2 changes
+import com.gv.it.exception.ErrorContainer;
+import com.gv.it.exception.ErrorFactory;
+
+
+//Governo-show CSPS 2.0 Message-start
+	public boolean showCSPSMessage(String usergrp) throws ErrorContainer
+	{
+		boolean showMessage=false;
+	    ArrayList params = new ArrayList();
+		ArrayList<ResultSetBean> result=new ArrayList();
+		try{
+			GenericDAO dao 	= (GenericDAO)ConfigurationSingleton.getInstance().getDaoFactory().getDAO("changeGda");
+			String statement =ConfigurationSingleton.getInstance().getDaoFactory().getDAOStmt("changeGda", "fetchUserGp");
+			params.add(usergrp);
+			result = (ArrayList<ResultSetBean>) dao.findByGenericCriteria(statement,params);
+			if(result !=null){
+				showMessage=true;
+			}
+			
+		}
+		catch (Exception e) {
+		throw ErrorFactory.createErrorContainer(e, this,e.getMessage(),"fetchUserGp");
+		}
+		
+		return showMessage;
+	}
+	public String getCSPSEditEmail() throws ErrorContainer
+	{
+		String email =null;
+	    ArrayList params = new ArrayList();
+		ArrayList result=new ArrayList();
+		try{
+			GenericDAO dao 	= (GenericDAO)ConfigurationSingleton.getInstance().getDaoFactory().getDAO("changeGda");
+			String statement = ConfigurationSingleton.getInstance().getDaoFactory().getDAOStmt("changeGda", "fetchEditEmail");
+			ResultSetBean bean = (ResultSetBean)dao.findByPrimaryKey(statement,params);
+			if(bean!=null)
+			{
+				email=(String)bean.getColumn(0);
+			}
+			else{
+				email="";
+			}
+			
+		}
+		catch (Exception e) {
+		throw ErrorFactory.createErrorContainer(e, this,e.getMessage(),"fetchEditEmail");
+		}
+		
+		return email;
+	}
+	public String getCSPS2URL() throws ErrorContainer
+	{
+		String url =null;
+	    ArrayList params = new ArrayList();
+		ArrayList result=new ArrayList();
+		try{
+			GenericDAO dao 	= (GenericDAO)ConfigurationSingleton.getInstance().getDaoFactory().getDAO("changeGda");
+			String statement = ConfigurationSingleton.getInstance().getDaoFactory().getDAOStmt("changeGda", "CSPS2URL");
+			ResultSetBean bean = (ResultSetBean)dao.findByPrimaryKey(statement,params);
+			if(bean!=null)
+			{
+				url=(String)bean.getColumn(0);
+			}
+			
+		}
+		catch (Exception e) {
+		throw ErrorFactory.createErrorContainer(e, this,e.getMessage(),"CSPS2URL");
+		}
+		
+		return url;
+	}
+	//Governo-show CSPS 2.0 Message-end
+	
+===ChangeApplAction.java===
+there are 4 changes 
+1. import com.gv.it.bean.NewMessageCSPSbean;
+2. NewMessageCSPSbean beanNewMsg=null; -> took a variable assigning  it to null
+3. empty spce
+4. // New GDA management - END	
+								//csps 2.0 msg Governo-start
+								boolean showMsg = model.showCSPSMessage(userPf.getUsrGrp());
+								
+								if(showMsg){
+									beanNewMsg=new NewMessageCSPSbean();
+									beanNewMsg.setCspsMsg(showMsg);
+									String email=model.getCSPSEditEmail();
+									beanNewMsg.setCspsEditEmail(email);
+									if(!email.isEmpty())
+									{
+									String csps2URL=model.getCSPS2URL();
+									beanNewMsg.setCspsUrl(csps2URL);
+									}
+									session.setAttribute("NewCSPSMsg", beanNewMsg);
+								}
+	//csps 2.0 msg Governo-end
+===ApplicationResources.properties===
+	#RIO_1329 start
+MsgNewCSPS=Please access CSPS 2.0 using link below.
+Msg2NewCSPS=If you need edit access Please contact 
+Msg3NewCSPS=Link:

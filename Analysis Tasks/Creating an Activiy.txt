@@ -1,0 +1,11 @@
+Creating an Activity
+
+Activity : CQDB00153033
+
+J_CIA_EVO_Config_NewNZPilotings_codetables.xml
+
+J - jaa
+CIA_EVO - Stream
+config - Module
+NewNZPilotings - Descripation
+codetables.xml - file which we made changes.
